@@ -9,13 +9,13 @@ const Button = ({
 }) => {
   const variants = {
     primary:
-      "bg-[#D6EB29] text-[#050816] hover:scale-105 hover:shadow-[0_0_30px_rgba(214,235,41,.4)]",
+      "bg-[#D5D93B] text-[#0F1039] hover:scale-105 hover:shadow-[0_0_30px_rgba(214,235,41,.4)]",
 
     secondary:
-      "bg-white/5 border border-white/10 text-white hover:bg-white/10",
+      "bg-[#0F1039]/10 text-[#0F1039] border border-[#0F1039]/15 dark:bg-white/5 dark:text-white dark:border-white/10",
 
     outline:
-      "border border-[#D6EB29] text-[#D6EB29] hover:bg-[#D6EB29] hover:text-[#050816]",
+      "border border-[#D5D93B] text-[#0F1039] dark:text-[#D5D93B] hover:bg-[#D5D93B] hover:text-[#0F1039]",
   };
 
   const sizes = {

@@ -3,14 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root{
-  --bg:#ffffff;
-  --text:#050816;
-  --primary:#D6EB29;
+  --bg:#0F1039;
+  --text:#FFFFFF;
+  --primary:#D5D93B;
 }
 
 .dark{
-  --bg:#050816;
-  --text:#ffffff;
+  --bg:#0F1039;
+  --text:#FFFFFF;
 }
 
 body{

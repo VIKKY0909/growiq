@@ -2,34 +2,35 @@ import Button from "./components/common/Button.jsx"
 import Container from "./components/common/Container.jsx";
 import ThemeToggle from "./components/common/ThemeToggle.jsx";
 
+import Navbar from "./components/layout/Navbar/Navbar";
+import { useTheme } from "./context/ThemeContext";
+
 function App() {
+
+  const { darkMode } = useTheme();
+
   return (
-    <div className="min-h-screen bg-white text-[#050816] dark:bg-[#050816] dark:text-white transition-all duration-500">
-      <Container className="py-20">
 
-        <h1 className="text-5xl font-bold text-[#D6EB29] mb-10">
-          GROOWIQ
-        </h1>
+    <div
+      className={`min-h-screen transition-all duration-500 ${
+        darkMode
+          ? "bg-[#0F1039] text-white"
+          : "bg-white text-[#0F1039]"
+      }`}
+    >
 
-        <div className="flex gap-5 flex-wrap items-center">
+      <Navbar />
 
-          <Button>Primary</Button>
+      <main className="pt-32">
 
-          <Button variant="secondary">
-            Secondary
-          </Button>
+        {/* Hero Section */}
 
-          <Button variant="outline">
-            Outline
-          </Button>
+      </main>
 
-          <ThemeToggle />
-
-        </div>
-
-      </Container>
     </div>
+
   );
+
 }
 
 export default App;
