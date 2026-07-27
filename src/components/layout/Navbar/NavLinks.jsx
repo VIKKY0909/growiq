@@ -3,7 +3,7 @@ import { navLinks } from "../../../data/navigation.js";
 
 const NavLinks = () => {
   return (
-    <ul className="hidden lg:flex items-center gap-8">
+    <ul className="flex items-center gap-8">
 
       {navLinks.map((item) => (
 
