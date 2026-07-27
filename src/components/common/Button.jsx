@@ -28,12 +28,6 @@ const Button = ({
 
   return (
     <button
-      // className={clsx(
-      //   "sm:flex px-4 lg:px-6 py-2 rounded-full font-semibold transition-all duration-300",
-      //   variants[variant],
-      //   sizes[size],
-      //   className
-      // )}
       className={clsx(
   "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 whitespace-nowrap",
   "px-3 py-2 text-xs",
