@@ -1,29 +1,238 @@
-import { motion } from "framer-motion";
 
-const HeroImage = () => {
+import { motion } from "framer-motion";
+import heroVideo from "../../assets/hero-video.mp4";
+
+const HeroImage = ({open}) => {
+  console.log("Hero Image open", open);
+  
   return (
     <motion.div
       initial={{ opacity: 0, x: 60 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex justify-center"
+      className="
+        relative
+        flex
+        justify-center
+        items-center
+        w-full
+        min-h-[520px]
+        lg:min-h-[700px]
+      "
     >
-      <div className="relative w-[300px] h-[620px] rounded-[50px] border-4 border-pink-500 bg-[#111] shadow-[0_0_50px_rgba(236,72,153,.4)]">
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 text-xs text-white">
-          ● Live Results
-        </div>
+      {/* Brand Glow */}
+      <div
+        className="
+          absolute
+          -z-10
+          rounded-full
+          bg-[#D5D93B]/10
+          blur-[110px]
+          w-[250px]
+          h-[250px]
+          sm:w-[320px]
+          sm:h-[320px]
+          lg:w-[430px]
+          lg:h-[430px]
+        "
+      />
 
-        <div className="flex flex-col justify-center items-center h-full">
-          <h2 className="text-6xl font-black">WE</h2>
+      {/* ================= RIGHT CARD ================= */}
 
-          <h2 className="text-6xl font-black text-orange-500 mt-4">
-            ARE
+      <motion.div
+        animate={{ y: [-8, 8, -8] }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        // className="
+        //   hidden
+        //   xl:block
+        //   absolute
+        //   top-24
+        //   -right-10
+        //   z-30
+        // "
+        className={`
+absolute
+top-24
+-right-10
+z-30
+hidden
+md:block
+transition-all
+duration-300
+${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
+`}
+      >
+        <div className="rounded-2xl bg-white px-5 py-4 shadow-2xl">
+          <p className="text-xs text-gray-500">
+            Qualified Leads
+          </p>
+
+          <h2 className="text-3xl font-black text-[#0F1039]">
+            128+
           </h2>
 
-          <h2 className="text-5xl font-black mt-4">
-            READYYY!
-          </h2>
+          <p className="text-sm font-semibold text-[#D5D93B]">
+            This Month
+          </p>
         </div>
+      </motion.div>
+
+      {/* ================= LEFT CARD ================= */}
+
+      <motion.div
+        animate={{ y: [8, -8, 8] }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        // className="
+        //   hidden
+        //   xl:block
+        //   absolute
+        //   left-[-25px]
+        //   bottom-36
+        //   z-30
+        // "
+        className={`
+absolute
+left-[-25px]
+bottom-36
+z-30
+hidden
+md:block
+transition-all
+duration-300
+${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
+`}
+      >
+        <div className="rounded-2xl bg-[#D5D93B] px-5 py-4 shadow-xl">
+          <p className="text-xs text-[#0F1039]/70">
+            Avg. ROAS
+          </p>
+
+          <h2 className="text-3xl font-black text-[#0F1039]">
+            8.7×
+          </h2>
+
+          <p className="text-xs text-[#0F1039]/70">
+            Campaign Performance
+          </p>
+        </div>
+      </motion.div>
+
+      {/* ================= BOTTOM CARD ================= */}
+
+      <motion.div
+        animate={{ y: [-6, 6, -6] }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+    
+        className={`
+            absolute
+            left-1/2
+           -translate-x-1/2
+           -bottom-6
+           z-30
+           hidden
+           md:block
+          transition-all
+          duration-300
+          ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
+       `}
+      >
+        <div className="rounded-2xl bg-[#0F1039] px-6 py-4 shadow-xl">
+          <p className="text-xs text-gray-300">
+            Conversion Rate
+          </p>
+
+          <div className="flex items-end gap-2">
+            <span className="text-3xl font-black text-[#D5D93B]">
+              92%
+            </span>
+
+            <span className="text-xs text-green-400 mb-1">
+              High Intent
+            </span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ================= PHONE ================= */}
+
+      <div
+        className="
+          relative
+          overflow-hidden
+          rounded-[40px]
+          border
+          border-[#D5D93B]/30
+          bg-[#0B1023]
+          shadow-[0_0_40px_rgba(213,217,59,.15)]
+
+          w-[240px]
+          h-[470px]
+
+          sm:w-[270px]
+          sm:h-[520px]
+
+          md:w-[290px]
+          md:h-[560px]
+
+          lg:w-[320px]
+          lg:h-[620px]
+        "
+      >
+        {/* Live Badge */}
+
+        {/* <div
+          className="
+            absolute
+            left-1/2
+            -translate-x-1/2
+            top-5
+            z-20
+            flex
+            items-center
+            gap-2
+            rounded-full
+            bg-black/40
+            backdrop-blur-xl
+            border
+            border-white/10
+            px-4
+            py-2
+          "
+        >
+          <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+
+          <span className="text-xs text-white font-medium">
+            Live Campaign
+          </span>
+        </div> */}
+
+        {/* Video */}
+
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+
+        {/* Overlay */}
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-black/5 pointer-events-none" />
       </div>
     </motion.div>
   );

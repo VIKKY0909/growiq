@@ -1,9 +1,12 @@
 import Navbar from "./components/layout/Navbar/Navbar";
 import { useTheme } from "./context/ThemeContext";
 import Hero from "./components/hero/Hero"
+import { useState } from "react";
+import LeadModal from "./components/CTA/LeadModel";
 
 function App() {
   const { darkMode } = useTheme();
+  const [open, setOpen] = useState(false)
 
   return (
     <div
@@ -13,13 +16,18 @@ function App() {
           : "bg-white text-[#0F1039]"
       }`}
     >
-      <Navbar />
+      {/* <Navbar /> */}
+       <Navbar  open={open} setOpen={setOpen}   />
 
       <main className="pt-32">
         {/* Hero Section */}
-        <Hero />
+        {/* <Hero /> */}
+        <Hero  open={open} setOpen={setOpen}/>
         
       </main>
+      <LeadModal open={open}
+      onClose={()=> setOpen(false)}
+      />
     </div>
   );
 }

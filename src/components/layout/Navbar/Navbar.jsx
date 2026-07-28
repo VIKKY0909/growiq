@@ -7,8 +7,13 @@ import MobileMenu from "./MobileMenu";
 import ThemeToggle from "../../common/ThemeToggle";
 import Button from "../../common/Button";
 import Container from "../../common/Container";
+// import LeadModal from "../../CTA/LeadModel";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({open, setOpen}) => {
+  // const [open, setOpen] = useState(false)
+  console.log("navbar open", open);
+  
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <Container>
@@ -49,9 +54,15 @@ const Navbar = () => {
 
             {/* Hide only on very small screens */}
             <div className="hidden min-[390px]:block">
-              <Button className="px-3 py-2 text-xs sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-3 lg:text-base">
+              {/* <Button className="px-3 py-2 text-xs sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-3 lg:text-base">
                 Let's Grow
-              </Button>
+              </Button> */}
+              <Button
+              onClick={() => setOpen(true)}
+              className="px-3 py-2 text-xs sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-3 lg:text-base"
+              >
+              Let's Grow
+             </Button>
             </div>
 
             {/* Mobile Menu */}
@@ -60,7 +71,11 @@ const Navbar = () => {
             </div>
           </div>
         </motion.div>
+       
       </Container>
+       {/* <LeadModal open={open}
+        onClose={()=> setOpen(false)}
+        /> */}
     </header>
   );
 };

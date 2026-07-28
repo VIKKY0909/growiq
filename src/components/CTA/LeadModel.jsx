@@ -19,6 +19,7 @@ const LeadModal = ({ open, onClose }) => {
  const [success, setSuccess] = useState(false)
 
  const GOOGLE_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbwUwadi9JSGCVfIFYkoyMRTPkCJfJtTNUsfMC3i2cANc3Eh4eAME242OwJ0n5KxnxzsDA/exec";
+                           
 
 
   const handleChange = (e) => {
@@ -150,7 +151,7 @@ const handleClose = () => {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 overflow-y-auto flex items-start sm:items-center justify-center p-4 bg-black/70 backdrop-blur-md mt-10"
+          className="fixed inset-0 z-[9999] overflow-y-auto flex items-center sm:items-center justify-center p-4 bg-black/70 backdrop-blur-md mt-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
