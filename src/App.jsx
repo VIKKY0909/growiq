@@ -3,6 +3,7 @@ import { useTheme } from "./context/ThemeContext";
 import Hero from "./components/hero/Hero"
 import { useState } from "react";
 import LeadModal from "./components/CTA/LeadModel";
+import About from "./components/about/About"
 
 function App() {
   const { darkMode } = useTheme();
@@ -23,6 +24,7 @@ function App() {
         {/* Hero Section */}
         {/* <Hero /> */}
         <Hero  open={open} setOpen={setOpen}/>
+        <About/>
         
       </main>
       <LeadModal open={open}
