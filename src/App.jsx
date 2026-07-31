@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero"
 import { useState } from "react";
 import LeadModal from "./components/CTA/LeadModel";
 import About from "./components/about/About"
+import Services from "./components/services/Services"
 
 function App() {
   const { darkMode } = useTheme();
@@ -25,6 +26,7 @@ function App() {
         {/* <Hero /> */}
         <Hero  open={open} setOpen={setOpen}/>
         <About/>
+        <Services/>
         
       </main>
       <LeadModal open={open}
