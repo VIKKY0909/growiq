@@ -18,7 +18,7 @@ const positions = [
 
 const ServicesGrid = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
       {services.map((service, index) => (
         <motion.div
           key={service.title}

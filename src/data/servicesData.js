@@ -184,107 +184,116 @@ export const services = [
     icon: Megaphone,
     title: "Social Media Management",
     description:
-      "Build organic social media ecosystems that increase brand visibility, engagement and customer trust.",
+      "Grow your brand with engaging social content that builds trust, reach and loyal communities.",
     features: [
-      "Content Strategy & Ideation",
-      "Multi-platform Scheduling",
+      "Content Strategy",
+      "Post Scheduling",
       "Community Management",
     ],
+    theme: "dark"
   },
 
   {
     icon: TrendingUp,
     title: "Performance Marketing",
     description:
-      "Data-driven Meta & Google advertising campaigns focused on ROI, lead generation and scalable growth.",
+      "Run ROI-focused Meta and Google ad campaigns that generate quality leads and measurable growth.",
     features: [
-      "Audience Segmentation",
+      "Audience Targeting",
       "Meta & Google Ads",
-      "Conversion Optimization",
+      "Conversion Boost",
     ],
+    theme: "light"
   },
 
   {
     icon: Brain,
     title: "AI Marketing",
     description:
-      "Use AI-powered workflows to automate campaigns, improve personalization and maximize marketing efficiency.",
+      "Automate marketing workflows using AI to improve personalization, efficiency and campaign performance.",
     features: [
-      "AI Campaign Automation",
+      "AI Automation",
       "Prompt Engineering",
-      "Marketing Automation",
+      "Smart Workflows",
     ],
+    theme: "dark"
   },
 
   {
     icon: Search,
     title: "SEO & Website Development",
     description:
-      "Build lightning-fast websites optimized for search engines, user experience and long-term growth.",
+      "Build fast, SEO-friendly websites that improve rankings, user experience and online visibility.",
     features: [
       "Technical SEO",
       "Landing Pages",
       "Core Web Vitals",
     ],
+    theme: "light"
   },
 
   {
     icon: PenTool,
     title: "Brand Identity & Creative",
     description:
-      "Design a memorable visual identity that helps your business stand out across every platform.",
+      "Create a strong visual identity that makes your business memorable across every platform.",
     features: [
       "Logo Design",
       "Brand Guidelines",
       "Creative Assets",
     ],
+    theme: "dark"
   },
 
   {
     icon: Smartphone,
     title: "Content & Video Production",
     description:
-      "Create high-impact videos, reels and short-form content built specifically for modern audiences.",
+      "Produce engaging videos and short-form content designed for modern audiences and social platforms.",
     features: [
       "Instagram Reels",
       "Video Editing",
-      "Creative Production",
+      "Content Creation",
     ],
+    theme: "light"
   },
 
   {
     icon: Globe,
     title: "Influencer Marketing",
     description:
-      "Connect your brand with trusted creators who deliver authentic engagement and measurable business results.",
+      "Partner with trusted creators to increase brand awareness, engagement and customer confidence.",
     features: [
-      "Creator Sourcing",
-      "Campaign Management",
+      "Creator Network",
+      "Campaign Setup",
       "ROI Tracking",
     ],
+    theme: "dark"
   },
 
   {
     icon: BarChart3,
     title: "Analytics & Consultation",
     description:
-      "Measure every campaign with advanced analytics and actionable business insights.",
+      "Track campaign performance with real-time insights and data-driven recommendations for growth.",
     features: [
-      "Marketing Dashboards",
-      "Performance Audits",
-      "Growth Reporting",
+      "Dashboards",
+      "Performance Audit",
+      "Growth Reports",
     ],
+    theme: "light"
   },
 
   {
     icon: Sparkles,
     title: "Growth Strategy",
     description:
-      "End-to-end digital growth strategies combining branding, marketing and technology into one roadmap.",
+      "Build a scalable roadmap that aligns branding, marketing and technology for sustainable business growth.",
     features: [
       "Business Scaling",
       "Funnel Strategy",
-      "Long-term Planning",
+      "Growth Planning",
     ],
+    theme: "dark"
   },
 ];

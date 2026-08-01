@@ -2,40 +2,46 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ServiceCard = ({ service }) => {
+  
   const Icon = service.icon;
+
+
+
 
   return (
     <motion.div
+
       whileHover={{
-        y: -10,
-        scale: 1.02,
+        y: -12,
+        scale: 1.04,
       }}
       transition={{
         type: "spring",
         stiffness: 250,
         damping: 18,
       }}
+
       className="
       group
       relative
-      min-h-[320px]
-      lg:min-h-[340px]
+      min-h-[340px]
+      lg:min-h-[360px]
       overflow-hidden
       rounded-[26px]
       border
-      border-black/10
+      border-white/10
       dark:border-white/10
       bg-white/70
       dark:bg-white/[0.04]
       backdrop-blur-2xl
-      p-6
-      lg:p-7
-      shadow-xl
+      p-7
+      lg:p-8
+      shadow-[0_20px_50px_rgba(0,0,0,.25)]
       transition-all
       duration-500
       hover:-translate-y-2
-      hover:border-[#D5D93B]/50
-      hover:shadow-[0_0_45px_rgba(213,217,59,0.18)]
+      hover:border-[#D5D93B]/70
+      hover:shadow-[0_0_60px_rgba(213,217,59,0.28)]
       "
     >
       {/* Spotlight */}
@@ -58,15 +64,15 @@ const ServiceCard = ({ service }) => {
         -left-full
         top-0
         h-full
-        w-1/2
+        w-[60%]
         rotate-12
         bg-gradient-to-r
         from-transparent
-        via-white/20
+        via-white/35
         to-transparent
         transition-all
         duration-1000
-        group-hover:left-[130%]
+        group-hover:left-[170%]
       "
       />
 
@@ -119,9 +125,11 @@ const ServiceCard = ({ service }) => {
       <div className="relative z-10 flex items-center gap-4">
 
   <motion.div
+ 
     whileHover={{
       rotate: 360,
       scale: 1.08,
+   
     }}
     transition={{ duration: 0.8 }}
     className="
@@ -134,16 +142,17 @@ const ServiceCard = ({ service }) => {
       rounded-2xl
       bg-[#D5D93B]/15
       text-[#D5D93B]
-      shadow-[0_0_25px_rgba(213,217,59,.25)]
+      shadow-[0_0_40px_rgba(213,217,59,.35)]
     "
   >
     <Icon size={26} />
   </motion.div>
 
   <h3
+
     className="
-      text-[22px]
-      font-semibold
+      text-[24px]
+      font-bold
       leading-tight
       text-[#0F1039]
       dark:text-white
@@ -156,12 +165,14 @@ const ServiceCard = ({ service }) => {
 
       {/* Description */}
       <p
+    
+  
         className="
         relative
         z-10
-        mt-3
+        mt-5
         text-[15px]
-        leading-6
+        leading-7
         text-[#0F1039]/75
         dark:text-gray-300
         "
@@ -171,26 +182,27 @@ const ServiceCard = ({ service }) => {
 
       {/* Features */}
       <div
+
         className="
         relative
         z-10
-        mt-5
+        mt-7
        flex
        flex-wrap
        justify-center
        items-center
-        gap-x-5
-        gap-y-3
+        gap-x-6
+        gap-y-4
         "
       >
         {service.features.map((item) => (
           <div
             key={item}
-            className="flex items-center gap-2 whitespace-nowrap"
+            className="flex items-start justify-center gap-2 w-full "
           >
-            <div className="mt-2 h-2 w-2 rounded-full bg-[#D5D93B] shrink-0" />
+            <div className="mt-[8px] h-2 w-2 rounded-full bg-[#D5D93B] shrink-0" />
 
-            <span className="text-[13px] whitespace-nowrap leading-6 text-[#0F1039]/80 dark:text-gray-300">
+            <span className="flex-1 text-sm text-left  leading-6 text-[#0F1039]/80 dark:text-gray-300">
               {item}
             </span>
           </div>
@@ -198,7 +210,7 @@ const ServiceCard = ({ service }) => {
       </div>
 
       {/* CTA */}
-      <motion.div
+      {/* <motion.div
         whileHover={{
           x: 5,
         }}
@@ -219,7 +231,7 @@ const ServiceCard = ({ service }) => {
           size={18}
           className="transition-transform duration-300 group-hover:translate-x-1"
         />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
