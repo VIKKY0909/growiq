@@ -5,6 +5,9 @@ import { useState } from "react";
 import LeadModal from "./components/CTA/LeadModel";
 import About from "./components/about/About"
 import Services from "./components/services/Services"
+import WhyUs from "./components/whyus/WhyUs";
+import Process from "./components/process/Process"
+import Testimonials from "./components/testimonials/Testimonials"
 
 function App() {
   const { darkMode } = useTheme();
@@ -27,7 +30,9 @@ function App() {
         <Hero  open={open} setOpen={setOpen}/>
         <About/>
         <Services/>
-        
+        <WhyUs/>
+        <Process/>
+        <Testimonials/>
       </main>
       <LeadModal open={open}
       onClose={()=> setOpen(false)}

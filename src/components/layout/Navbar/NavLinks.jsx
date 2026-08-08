@@ -11,15 +11,7 @@ const NavLinks = () => {
 
           <a
             href={`#${item.id}`}
-            className="
-            text-[15px]
-            font-medium
-            text-[#0F1039]
-            dark:text-white
-            hover:text-[#D5D93B]
-            transition-all
-            duration-300
-            "
+            className="text-[15px]  font-medium  text-[#0F1039]  dark:text-white  hover:text-[#D5D93B]  transition-all  duration-300 "
           >
             {item.title}
           </a>

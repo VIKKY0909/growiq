@@ -12,16 +12,16 @@ export const navLinks = [
     title: "Services",
   },
   {
-    id: "portfolio",
-    title: "Portfolio",
+    id: "why-us",
+    title: "Why Us",
   },
   {
     id: "process",
     title: "Process",
   },
   {
-    id: "team",
-    title: "Team",
+    id: "testimonials",
+    title: "Testimonials",
   },
   {
     id: "contact",

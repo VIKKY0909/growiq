@@ -11,9 +11,7 @@ import Container from "../../common/Container";
 import { useState } from "react";
 
 const Navbar = ({open, setOpen}) => {
-  // const [open, setOpen] = useState(false)
-  console.log("navbar open", open);
-  
+
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <Container>
@@ -21,24 +19,7 @@ const Navbar = ({open, setOpen}) => {
           initial={{ y: -70 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="
-            mt-3
-            flex
-            items-center
-            justify-between
-            gap-3
-            rounded-full
-            border
-            border-white/40
-            bg-white/10
-            dark:bg-[#0F1039]/80
-            backdrop-blur-xl
-            shadow-xl
-            px-4
-            sm:px-6
-            lg:px-8
-            py-2
-          "
+          className="mt-3  flex  items-center  justify-between  gap-3  rounded-full  border  border-white/40  bg-white/10  dark:bg-[#0F1039]/80  backdrop-blur-xl  shadow-xl  px-4  sm:px-6  lg:px-8  py-2"
         >
           {/* Logo */}
           <Logo />
@@ -54,9 +35,7 @@ const Navbar = ({open, setOpen}) => {
 
             {/* Hide only on very small screens */}
             <div className="hidden min-[390px]:block">
-              {/* <Button className="px-3 py-2 text-xs sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-3 lg:text-base">
-                Let's Grow
-              </Button> */}
+         
               <Button
               onClick={() => setOpen(true)}
               className="px-3 py-2 text-xs sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-3 lg:text-base"
@@ -67,7 +46,8 @@ const Navbar = ({open, setOpen}) => {
 
             {/* Mobile Menu */}
             <div className="lg:hidden">
-              <MobileMenu />
+              {/* <MobileMenu /> */}
+              <MobileMenu onGrow={() => setOpen(true)} />
             </div>
           </div>
         </motion.div>
