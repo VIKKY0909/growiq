@@ -131,20 +131,7 @@ const reset = () => {
         scale: 1.02,
        }}
         transition={{ duration: 0.3 }}
-        className="
-        relative
-        overflow-hidden
-        w-[300px]
-        h-[540px]
-        lg:w-[360px]
-        lg:h-[620px]
-        overflow-hidden
-        rounded-[38px]
-        border
-        border-[#D5D93B]/20
-        bg-[#0B1023]
-        shadow-[0_25px_70px_rgba(213,217,59,.18)]
-        "
+        className="relative  overflow-hidden  w-[300px]  h-[540px]  lg:w-[360px]  lg:h-[620px]  overflow-hidden  rounded-[38px]  border  border-[#D5D93B]/20  bg-[#0B1023]  shadow-[0_25px_70px_rgba(213,217,59,.18)]"
       >
         {/* Video */}
 
@@ -163,16 +150,8 @@ const reset = () => {
 
         {/* <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-[#0B1023]/20 to-[#0B1023]" /> */}
         <div
-  className="
-    absolute
-    inset-0
-    rounded-[38px]
-    bg-gradient-to-b
-    from-black/20
-    via-transparent
-    to-[#0B1023]
-  "
-/>
+         className="absolute  inset-0  rounded-[38px]  bg-gradient-to-b  from-black/20  via-transparent  to-[#0B1023]"
+       />
 
         {/* Content */}
 

@@ -39,8 +39,7 @@ const AboutContent = () => {
 
       <motion.div
         variants={item}
-        className="
-        inline-flex
+        className="inline-flex
         items-center
         rounded-full
         border
@@ -76,22 +75,7 @@ const AboutContent = () => {
         <span className="bg-gradient-to-r from-[#D5D93B] via-[#d5d93b] to-[#B8C11F] bg-clip-text text-transparent inline-block">
             We Build Digital Growth Engines.
         </span>
-        {/* <motion.span
-  animate={{
-    textShadow: [
-      "0 0 0px rgba(213,217,59,0)",
-      "0 0 18px rgba(213,217,59,.45)",
-      "0 0 0px rgba(213,217,59,0)",
-    ],
-  }}
-  transition={{
-    duration: 3,
-    repeat: Infinity,
-  }}
-  className="text-[#D5D93B]"
->
-  We Build Digital Growth Engines.
-</motion.span> */}
+
       </motion.h2>
 
       {/* Description */}

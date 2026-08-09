@@ -8,6 +8,9 @@ import Services from "./components/services/Services"
 import WhyUs from "./components/whyus/WhyUs";
 import Process from "./components/process/Process"
 import Testimonials from "./components/testimonials/Testimonials"
+import Contact from "./components/contact/Contact"
+import Footer from "./components/footer/Footer";
+import ClientLogos from "./components/clientsLogo/ClientLogos"
 
 function App() {
   const { darkMode } = useTheme();
@@ -33,6 +36,9 @@ function App() {
         <WhyUs/>
         <Process/>
         <Testimonials/>
+        <ClientLogos/>
+        <Contact setOpen={setOpen}/>
+        <Footer/>
       </main>
       <LeadModal open={open}
       onClose={()=> setOpen(false)}

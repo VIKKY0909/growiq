@@ -10,31 +10,11 @@ const HeroImage = ({open}) => {
       initial={{ opacity: 0, x: 60 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="
-        relative
-        flex
-        justify-center
-        items-center
-        w-full
-        min-h-[520px]
-        lg:min-h-[700px]
-      "
+      className="relative  flex  justify-center  items-center  w-full  min-h-[520px]  lg:min-h-[700px]"
     >
       {/* Brand Glow */}
       <div
-        className="
-          absolute
-          -z-10
-          rounded-full
-          bg-[#D5D93B]/10
-          blur-[110px]
-          w-[250px]
-          h-[250px]
-          sm:w-[320px]
-          sm:h-[320px]
-          lg:w-[430px]
-          lg:h-[430px]
-        "
+        className="absolute  -z-10  rounded-full  bg-[#D5D93B]/10  blur-[110px]  w-[250px]  h-[250px]  sm:w-[320px]  sm:h-[320px]  lg:w-[430px]  lg:h-[430px]"
       />
 
       {/* ================= RIGHT CARD ================= */}
@@ -46,25 +26,9 @@ const HeroImage = ({open}) => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        // className="
-        //   hidden
-        //   xl:block
-        //   absolute
-        //   top-24
-        //   -right-10
-        //   z-30
-        // "
-        className={`
-absolute
-top-24
--right-10
-z-30
-hidden
-md:block
-transition-all
-duration-300
-${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
-`}
+        className={`absolute top-24 -right-10 z-30 hidden md:block transition-all duration-300
+        ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
+        `}
       >
         <div className="rounded-2xl bg-white px-5 py-4 shadow-2xl">
           <p className="text-xs text-gray-500">
@@ -90,26 +54,11 @@ ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        // className="
-        //   hidden
-        //   xl:block
-        //   absolute
-        //   left-[-25px]
-        //   bottom-36
-        //   z-30
-        // "
-        className={`
-absolute
-left-[-25px]
-bottom-36
-z-30
-hidden
-md:block
-transition-all
-duration-300
-${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
-`}
-      >
+   
+        className={`absolute left-[-25px] bottom-36 z-30 hidden md:block transition-all duration-300
+         ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
+         `}
+         >
         <div className="rounded-2xl bg-[#D5D93B] px-5 py-4 shadow-xl">
           <p className="text-xs text-[#0F1039]/70">
             Avg. ROAS
@@ -135,19 +84,10 @@ ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
           ease: "easeInOut",
         }}
     
-        className={`
-            absolute
-            left-1/2
-           -translate-x-1/2
-           -bottom-6
-           z-30
-           hidden
-           md:block
-          transition-all
-          duration-300
+        className={`absolute  left-1/2 -translate-x-1/2 -bottom-6 z-30 hidden md:block  transition-all  duration-300
           ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
-       `}
-      >
+         `}
+         >
         <div className="rounded-2xl bg-[#0F1039] px-6 py-4 shadow-xl">
           <p className="text-xs text-gray-300">
             Conversion Rate
@@ -168,55 +108,8 @@ ${open ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}
       {/* ================= PHONE ================= */}
 
       <div
-        className="
-          relative
-          overflow-hidden
-          rounded-[40px]
-          border
-          border-[#D5D93B]/30
-          bg-[#0B1023]
-          shadow-[0_0_40px_rgba(213,217,59,.15)]
-
-          w-[240px]
-          h-[470px]
-
-          sm:w-[270px]
-          sm:h-[520px]
-
-          md:w-[290px]
-          md:h-[560px]
-
-          lg:w-[320px]
-          lg:h-[620px]
-        "
+        className="relative  overflow-hidden  rounded-[40px]  border  border-[#D5D93B]/30  bg-[#0B1023]  shadow-[0_0_40px_rgba(213,217,59,.15)]  w-[240px]  h-[470px]  sm:w-[270px]  sm:h-[520px]  md:w-[290px]  md:h-[560px]  lg:w-[320px]  lg:h-[620px]"
       >
-        {/* Live Badge */}
-
-        {/* <div
-          className="
-            absolute
-            left-1/2
-            -translate-x-1/2
-            top-5
-            z-20
-            flex
-            items-center
-            gap-2
-            rounded-full
-            bg-black/40
-            backdrop-blur-xl
-            border
-            border-white/10
-            px-4
-            py-2
-          "
-        >
-          <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-
-          <span className="text-xs text-white font-medium">
-            Live Campaign
-          </span>
-        </div> */}
 
         {/* Video */}
 

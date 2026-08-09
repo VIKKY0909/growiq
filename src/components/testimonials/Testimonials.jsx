@@ -1,8 +1,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import ClientLogos from "./ClientLogos"
-import Footer from "./Footer"
+
+// import Footer from "./Footer"
 
 import TestimonialCard from "./TestimonialCard";
 import { testimonialsData } from "../../data/testimonialsData";
@@ -347,8 +347,8 @@ const Testimonials = () => {
           {String(testimonialsData.length).padStart(2, "0")}
         </span>
       </div>
-      <ClientLogos/>
-      <Footer/>
+      {/* <ClientLogos/> */}
+      
     </section>
     
   );

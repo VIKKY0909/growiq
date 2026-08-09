@@ -16,7 +16,8 @@ const ClientLogos = () => {
 
         bg-white
 
-        py-12
+        py-4
+        
 
         transition-colors
         duration-500
@@ -24,8 +25,11 @@ const ClientLogos = () => {
         dark:border-white/[0.08]
         dark:bg-[#0F1039]
 
-        sm:py-14
-        lg:py-16
+        sm:py-5
+        
+
+        lg:py-6
+        
       "
     >
       {/* =========================================
@@ -180,12 +184,12 @@ const ClientLogos = () => {
           relative
           z-10
 
-          mt-9
+          mt-5
 
           overflow-hidden
 
-          sm:mt-11
-          lg:mt-12
+          sm:mt-6
+          lg:mt-7
         "
       >
         {/* =====================================
@@ -461,7 +465,7 @@ const ClientLogos = () => {
           relative
           z-10
 
-          mt-7
+          mt-5
 
           flex
           items-center
