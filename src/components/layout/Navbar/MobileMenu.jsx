@@ -681,55 +681,24 @@ const MobileMenu = ({ onGrow }) => {
               {/* Header */}
 
               <div
-                className="
-                  mb-2
-                  flex
-                  items-center
-                  justify-between
-                  px-3
-                  py-2
-                "
+                className="mb-2  flex items-center  justify-between  px-3  py-2"
               >
                 <div>
                   <p
-                    className="
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.25em]
-
-                      text-[#8F9415]
-
-                      dark:text-[#D5D93B]
-                    "
+                    className="text-[9px]  font-bold  uppercase  tracking-[0.25em] text-[#8F9415]  dark:text-[#D5D93B]"
                   >
                     Navigation
                   </p>
 
                   <p
-                    className="
-                      mt-1
-                      text-xs
-
-                      text-[#0F1039]/40
-
-                      dark:text-white/40
-                    "
+                    className="mt-1  text-xs  text-[#0F1039]/40  dark:text-white/40"
                   >
                     Explore Groowiq
                   </p>
                 </div>
 
                 <span
-                  className="
-                    h-2
-                    w-2
-                    rounded-full
-
-                    bg-[#D5D93B]
-
-                    shadow-[0_0_12px_rgba(213,217,59,.8)]
-                  "
+                  className=" h-2 w-2  rounded-full  bg-[#D5D93B]  shadow-[0_0_12px_rgba(213,217,59,.8)]"
                 />
               </div>
 
@@ -753,63 +722,16 @@ const MobileMenu = ({ onGrow }) => {
                       duration: 0.25,
                       delay: index * 0.04,
                     }}
-                    className="
-                      group
-                      flex
-                      w-full
-                      items-center
-                      justify-between
-
-                      rounded-xl
-
-                      px-4
-                      py-3.5
-
-                      text-left
-
-                      transition-all
-                      duration-300
-
-                      hover:bg-[#D5D93B]/10
-
-                      dark:hover:bg-white/[0.06]
-                    "
+                    className="group  flex  w-full  items-center  justify-between  rounded-xl  px-4  py-3.5  text-left  transition-all  duration-300  hover:bg-[#D5D93B]/10  dark:hover:bg-white/[0.06]"
                   >
                     <span
-                      className="
-                        text-sm
-                        font-semibold
-
-                        text-[#0F1039]/80
-
-                        transition-colors
-                        duration-300
-
-                        group-hover:text-[#8F9415]
-
-                        dark:text-white/80
-                        dark:group-hover:text-[#D5D93B]
-                      "
+                      className="text-sm  font-semibold  text-[#0F1039]/80  transition-colors  duration-300  group-hover:text-[#8F9415]  dark:text-white/80  dark:group-hover:text-[#D5D93B]"
                     >
                       {item.title}
                     </span>
 
                     <span
-                      className="
-                        h-1.5
-                        w-1.5
-                        rounded-full
-
-                        bg-[#0F1039]/15
-
-                        transition-all
-                        duration-300
-
-                        group-hover:scale-125
-                        group-hover:bg-[#D5D93B]
-
-                        dark:bg-white/15
-                      "
+                      className="h-1.5  w-1.5  rounded-full  bg-[#0F1039]/15  transition-all  duration-300  group-hover:scale-125  group-hover:bg-[#D5D93B]  dark:bg-white/15"
                     />
                   </motion.button>
                 ))}
@@ -820,44 +742,12 @@ const MobileMenu = ({ onGrow }) => {
               ========================================= */}
 
               <div
-                className="
-                  mt-3
-                  border-t
-                  border-[#0F1039]/10
-                  pt-3
-
-                  dark:border-white/10
-                "
+                className="mt-3  border-t  border-[#0F1039]/10  pt-3  dark:border-white/10"
               >
                 <button
                   type="button"
                   onClick={handleGrow}
-                  className="
-                    flex
-                    w-full
-                    items-center
-                    justify-center
-                    gap-2
-
-                    rounded-xl
-
-                    bg-[#D5D93B]
-
-                    px-5
-                    py-3.5
-
-                    text-sm
-                    font-bold
-                    text-[#0F1039]
-
-                    shadow-[0_10px_30px_rgba(213,217,59,0.20)]
-
-                    transition-all
-                    duration-300
-
-                    hover:-translate-y-0.5
-                    hover:shadow-[0_15px_35px_rgba(213,217,59,0.30)]
-                  "
+                  className="flex  w-full  items-center  justify-center  gap-2  rounded-xl  bg-[#D5D93B]  px-5  py-3.5  text-sm  font-bold  text-[#0F1039]  shadow-[0_10px_30px_rgba(213,217,59,0.20)]  transition-all  duration-300  hover:-translate-y-0.5  hover:shadow-[0_15px_35px_rgba(213,217,59,0.30)]"
                 >
                   Let's Grow
 

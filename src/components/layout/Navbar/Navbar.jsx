@@ -7,7 +7,6 @@ import MobileMenu from "./MobileMenu";
 import ThemeToggle from "../../common/ThemeToggle";
 import Button from "../../common/Button";
 import Container from "../../common/Container";
-// import LeadModal from "../../CTA/LeadModel";
 import { useState } from "react";
 
 const Navbar = ({open, setOpen}) => {
@@ -46,16 +45,13 @@ const Navbar = ({open, setOpen}) => {
 
             {/* Mobile Menu */}
             <div className="lg:hidden">
-              {/* <MobileMenu /> */}
+          
               <MobileMenu onGrow={() => setOpen(true)} />
             </div>
           </div>
         </motion.div>
        
       </Container>
-       {/* <LeadModal open={open}
-        onClose={()=> setOpen(false)}
-        /> */}
     </header>
   );
 };
