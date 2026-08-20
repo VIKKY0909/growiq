@@ -10,7 +10,7 @@ const HeroImage = ({open}) => {
       initial={{ opacity: 0, x: 60 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative  flex  justify-center  items-center  w-full  min-h-[520px]  lg:min-h-[700px]"
+      className="relative flex justify-center items-center w-full min-h-[440px] sm:min-h-[540px] lg:min-h-[700px]"
     >
       {/* Brand Glow */}
       <div
@@ -108,7 +108,7 @@ const HeroImage = ({open}) => {
       {/* ================= PHONE ================= */}
 
       <div
-        className="relative  overflow-hidden  rounded-[40px]  border  border-[#D5D93B]/30  bg-[#0B1023]  shadow-[0_0_40px_rgba(213,217,59,.15)]  w-[240px]  h-[470px]  sm:w-[270px]  sm:h-[520px]  md:w-[290px]  md:h-[560px]  lg:w-[320px]  lg:h-[620px]"
+        className="relative overflow-hidden rounded-[36px] sm:rounded-[40px] border border-[#D5D93B]/30 bg-[#0B1023] shadow-[0_0_40px_rgba(213,217,59,.15)] w-[210px] h-[410px] sm:w-[270px] sm:h-[520px] md:w-[290px] md:h-[560px] lg:w-[320px] lg:h-[620px]"
       >
 
         {/* Video */}

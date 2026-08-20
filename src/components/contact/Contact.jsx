@@ -421,7 +421,7 @@ const Contact = ({setOpen}) => {
               {/* EMAIL */}
 
               <motion.a
-                href="mailto:hello@groowiq.com"
+                href="mailto:sales.groowiq@gmail.com"
                 whileHover={{ x: 6 }}
                 transition={{ duration: 0.25 }}
                 className="
@@ -502,7 +502,7 @@ const Contact = ({setOpen}) => {
                       dark:text-white
                     "
                   >
-                    hello@groowiq.com
+                    sales.groowiq@gmail.com
                   </span>
                 </span>
 

@@ -53,65 +53,54 @@ const HeroContent = ({setOpen}) => {
       className="relative z-10"
     >
       <motion.div
-  variants={item}
-  animate={{
-    scale: [1, 1.04, 1],
-    boxShadow: [
-      "0 0 0px rgba(213,217,59,0)",
-      "0 0 18px rgba(213,217,59,.35)",
-      "0 0 42px rgba(213,217,59,.8)",
-      "0 0 18px rgba(213,217,59,.35)",
-      "0 0 0px rgba(213,217,59,0)",
-    ],
-  }}
-  transition={{
-    duration: 2.5,
-    repeat: Infinity,
-  }}
-  whileHover={{
-    scale: 1.08,
-  }}
-  className={`inline-flex  items-center  rounded-full  border  px-5  py-2  text-sm  font-medium  backdrop-blur-md
+        variants={item}
+        animate={{
+          scale: [1, 1.02, 1],
+          opacity: [0.9, 1, 0.9],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        whileHover={{
+          scale: 1.05,
+        }}
+        className={`inline-flex items-center rounded-full border px-5 py-2 text-sm font-medium backdrop-blur-md shadow-[0_0_15px_rgba(213,217,59,0.15)] transition-all duration-300
+          ${
+            darkMode
+              ? "border-[#D5D93B]/30 bg-[#D5D93B]/10 text-[#D5D93B]"
+              : "border-[#0F1039]/15 bg-[#0F1039]/5 text-[#0F1039]"
+          }
+        `}
+      >
+        ✨ AI Powered Growth Marketing Studio
+      </motion.div>
 
-    ${
-      darkMode
-        ? "border-[#D5D93B]/40 bg-[#D5D93B]/10 text-[#D5D93B]"
-        : "border-[#0F1039]/15 bg-[#0F1039]/5 text-[#0F1039]"
-    }
-  `}
->
-  ✨ AI Powered Growth Marketing Studio
-</motion.div>
-
-      {/* Heading */}
-
-      <motion.div variants={container} className="mt-8">
+      <motion.div variants={container} className="mt-6 sm:mt-8">
         {lines.map((line, index) => (
           <motion.h1
             key={line}
             variants={item}
-            className={`text-5xl md:text-6xl xl:text-7xl font-black leading-[1.05]`}
+            className={`text-[32px] sm:text-5xl md:text-6xl xl:text-7xl font-black leading-[1.1] sm:leading-[1.05]`}
           >
             {index === 1 ? (
           <motion.span
-  animate={{
-    scale: [1, 1.02, 1],
-    textShadow: [
-      "0 0 8px rgba(213,217,59,.25)",
-      "0 0 22px rgba(213,217,59,.8)",
-      "0 0 8px rgba(213,217,59,.25)",
-    ],
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-  }}
-  style={{
-    color: "#D5D93B",
-  }}
->
-  {line}
-</motion.span>
+            animate={{
+              scale: [1, 1.02, 1],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              color: "#D5D93B",
+              textShadow: "0 0 12px rgba(213, 217, 59, 0.4)",
+            }}
+          >
+            {line}
+          </motion.span>
             ) : (
               <span
                 className={
@@ -129,7 +118,7 @@ const HeroContent = ({setOpen}) => {
 
       <motion.p
         variants={item}
-        className={`mt-8 max-w-xl text-lg leading-8 ${
+        className={`mt-6 sm:mt-8 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 ${
           darkMode
             ? "text-gray-300"
             : "text-[#0F1039]/70"
@@ -143,7 +132,7 @@ const HeroContent = ({setOpen}) => {
 
       <motion.div
         variants={item}
-        className="mt-10"
+        className="mt-8 sm:mt-10"
       >
         <AnimatedButton
           onClick={() => setOpen(true)}

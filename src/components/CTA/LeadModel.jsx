@@ -18,7 +18,7 @@ const LeadModal = ({ open, onClose }) => {
  const [loading, setLoading] = useState(false);
  const [success, setSuccess] = useState(false)
 
- const GOOGLE_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbwUwadi9JSGCVfIFYkoyMRTPkCJfJtTNUsfMC3i2cANc3Eh4eAME242OwJ0n5KxnxzsDA/exec";
+  const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || "";
                            
 
 
