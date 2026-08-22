@@ -15,36 +15,18 @@ const AnimatedButton = ({ onClick, children = "Start Your Growth" }) => {
       }}
       className="group relative overflow-hidden rounded-full bg-[#D5D93B] px-7 py-4 mt-4 font-bold cursor-pointer text-[#050816] shadow-lg transition-all duration-300"
     >
-      {/* Animated Shine */}
-      <motion.span
-        animate={{
-          x: ["-150%", "250%"],
-        }}
-        transition={{
-          duration: 2.5,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute inset-y-0 left-0 w-12 rotate-12 bg-white/40 blur-md"
+      {/* Shine sweep — CSS only, triggered on hover via group */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-full w-12 rotate-12 bg-white/40 blur-md transition-all duration-700 group-hover:left-[120%]"
       />
 
       <span className="relative flex items-center gap-3">
-         {children}
-
-        <motion.span
-          className="flex"
-          whileHover={{
-            x: 5,
-          }}
-          transition={{
-            duration: 0.25,
-          }}
-        >
-          <ArrowRight
-            size={20}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </motion.span>
+        {children}
+        <ArrowRight
+          size={20}
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        />
       </span>
     </motion.button>
   );

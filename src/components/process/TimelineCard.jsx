@@ -11,7 +11,7 @@ const TimelineCard = ({ step, index }) => {
 
   const isActive = useInView(cardRef, {
     amount: 0.35,
-    once: false,
+    once: true,
   });
 
   return (
@@ -34,19 +34,20 @@ const TimelineCard = ({ step, index }) => {
       <motion.div
         initial={{
           opacity: 0,
-          y: 50,
+          y: 30,
         }}
         whileInView={{
           opacity: 1,
           y: 0,
         }}
         viewport={{
-          once: false,
-          amount: 0.25,
+          once: true,
+          amount: 0.2,
         }}
         transition={{
-          duration: 0.7,
-          ease: [0.22, 1, 0.36, 1],
+          duration: 0.5,
+          ease: "easeOut",
+          delay: 0.05,
         }}
         className="
           flex
@@ -59,17 +60,7 @@ const TimelineCard = ({ step, index }) => {
       >
         {/* Mobile Number */}
 
-        <motion.div
-          animate={{
-            scale: isActive ? 1.12 : 1,
-            boxShadow: isActive
-              ? "0 0 30px rgba(213,217,59,.65)"
-              : "0 0 18px rgba(213,217,59,.30)",
-          }}
-          transition={{
-            duration: 0.4,
-            ease: "easeOut",
-          }}
+        <div
           className="
             relative
             z-10
@@ -86,38 +77,12 @@ const TimelineCard = ({ step, index }) => {
             text-sm
             font-bold
             text-[#D5D93B]
+            shadow-[0_0_18px_rgba(213,217,59,.35)]
           "
         >
           {step.number}
+        </div>
 
-          {/* Active Pulse */}
-
-          {isActive && (
-            <motion.span
-              initial={{
-                scale: 0.8,
-                opacity: 0.7,
-              }}
-              animate={{
-                scale: 1.6,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 1.3,
-                repeat: Infinity,
-                ease: "easeOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                rounded-full
-                border
-                border-[#D5D93B]/60
-              "
-            />
-          )}
-        </motion.div>
 
         {/* Mobile Card */}
 
@@ -330,28 +295,10 @@ const TimelineCard = ({ step, index }) => {
         "
       >
         <motion.div
-          initial={{
-            scale: 0.7,
-            opacity: 0,
-          }}
-          whileInView={{
-            scale: 1,
-            opacity: 1,
-          }}
-          animate={{
-            scale: isActive ? 1.15 : 1,
-            boxShadow: isActive
-              ? "0 0 35px rgba(213,217,59,.70)"
-              : "0 0 20px rgba(213,217,59,.35)",
-          }}
-          viewport={{
-            once: false,
-            amount: 0.3,
-          }}
-          transition={{
-            duration: 0.45,
-            ease: "easeOut",
-          }}
+          initial={{ scale: 0.7, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="
             relative
             flex
@@ -367,37 +314,10 @@ const TimelineCard = ({ step, index }) => {
             text-sm
             font-bold
             text-[#D5D93B]
+            shadow-[0_0_20px_rgba(213,217,59,.40)]
           "
         >
           {step.number}
-
-          {/* Active Pulse */}
-
-          {isActive && (
-            <motion.span
-              initial={{
-                scale: 0.8,
-                opacity: 0.7,
-              }}
-              animate={{
-                scale: 1.6,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 1.3,
-                repeat: Infinity,
-                ease: "easeOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                rounded-full
-                border
-                border-[#D5D93B]/60
-              "
-            />
-          )}
         </motion.div>
       </div>
 
@@ -437,22 +357,19 @@ const DesktopCard = ({ step, direction, isActive }) => {
     <motion.div
       initial={{
         opacity: 0,
-        x: direction === "left" ? -80 : 80,
+        x: direction === "left" ? -50 : 50,
       }}
       whileInView={{
         opacity: 1,
         x: 0,
       }}
-      animate={{
-        y: isActive ? -4 : 0,
-      }}
       viewport={{
-        once: false,
-        amount: 0.3,
+        once: true,
+        amount: 0.2,
       }}
       transition={{
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.55,
+        ease: "easeOut",
       }}
       className="
         group

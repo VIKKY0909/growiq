@@ -5,7 +5,7 @@ const ServicesHeading = () => {
     <motion.div
       initial={{ opacity: 0, y: 120, scale: .96 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: .7 }}
+      viewport={{ once: true, amount: .5 }}
       transition={{ duration: 1, ease: easeOut }}
       className="mx-auto max-w-4xl text-center"
     >

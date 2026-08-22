@@ -54,18 +54,8 @@ const HeroContent = ({setOpen}) => {
     >
       <motion.div
         variants={item}
-        animate={{
-          scale: [1, 1.02, 1],
-          opacity: [0.9, 1, 0.9],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        whileHover={{
-          scale: 1.05,
-        }}
+        whileHover={{ scale: 1.04 }}
+        transition={{ duration: 0.2 }}
         className={`inline-flex items-center rounded-full border px-5 py-2 text-sm font-medium backdrop-blur-md shadow-[0_0_15px_rgba(213,217,59,0.15)] transition-all duration-300
           ${
             darkMode
@@ -85,22 +75,14 @@ const HeroContent = ({setOpen}) => {
             className={`text-[32px] sm:text-5xl md:text-6xl xl:text-7xl font-black leading-[1.1] sm:leading-[1.05]`}
           >
             {index === 1 ? (
-          <motion.span
-            animate={{
-              scale: [1, 1.02, 1],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+          <span
             style={{
               color: "#D5D93B",
               textShadow: "0 0 12px rgba(213, 217, 59, 0.4)",
             }}
           >
             {line}
-          </motion.span>
+          </span>
             ) : (
               <span
                 className={

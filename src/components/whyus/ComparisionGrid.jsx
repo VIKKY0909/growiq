@@ -164,7 +164,7 @@ const ComparisonGrid = () => {
             y:0
           }}
           viewport={{
-            once:false,
+            once: true,
             amount:.25
           }}
           transition={{
@@ -286,18 +286,8 @@ before:content-['']
             <div className="flex justify-center">
 
               <motion.div
-
-              
-  animate={{
-    x: [0, 10, 0],
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-  }}
-  whileHover={{
-    scale: 1.2,
-  }}
+  whileHover={{ scale: 1.15 }}
+  transition={{ duration: 0.2 }}
 
                 className="
                 h-12

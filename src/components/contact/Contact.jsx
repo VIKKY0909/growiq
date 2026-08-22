@@ -65,18 +65,8 @@ const Contact = ({setOpen}) => {
         "
       />
 
-      {/* Floating decorative circles */}
-
-      <motion.div
-        animate={{
-          y: [0, -18, 0],
-          opacity: [0.25, 0.5, 0.25],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+      {/* Floating decorative circles — CSS only */}
+      <div
         className="
           pointer-events-none
           absolute
@@ -87,19 +77,11 @@ const Contact = ({setOpen}) => {
           rounded-full
           bg-[#D5D93B]
           shadow-[0_0_20px_rgba(213,217,59,.8)]
+          animate-pulse
         "
       />
 
-      <motion.div
-        animate={{
-          y: [0, 15, 0],
-          opacity: [0.15, 0.35, 0.15],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+      <div
         className="
           pointer-events-none
           absolute
@@ -109,6 +91,7 @@ const Contact = ({setOpen}) => {
           w-1.5
           rounded-full
           bg-[#D5D93B]
+          animate-pulse
         "
       />
 
@@ -156,22 +139,14 @@ const Contact = ({setOpen}) => {
               gap-2
             "
           >
-            <motion.span
-              animate={{
-                scale: [1, 1.35, 1],
-                opacity: [0.65, 1, 0.65],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+            <span
               className="
                 h-2
                 w-2
                 rounded-full
                 bg-[#D5D93B]
                 shadow-[0_0_14px_rgba(213,217,59,.75)]
+                animate-pulse
               "
             />
 
@@ -764,15 +739,7 @@ const Contact = ({setOpen}) => {
                 dark:border-white/[0.08]
               "
             >
-              <motion.span
-                animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.6, 1, 0.6],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
+              <span
                 className="
                   h-1.5
                   w-1.5
@@ -780,6 +747,7 @@ const Contact = ({setOpen}) => {
                   rounded-full
                   bg-[#D5D93B]
                   shadow-[0_0_8px_rgba(213,217,59,.8)]
+                  animate-pulse
                 "
               />
 
@@ -901,18 +869,8 @@ const Contact = ({setOpen}) => {
               "
             />
 
-            {/* Moving glow */}
-
-            <motion.div
-              animate={{
-                x: [0, 80, 0],
-                y: [0, -30, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+            {/* Static glow */}
+            <div
               className="
                 pointer-events-none
                 absolute
@@ -969,20 +927,14 @@ const Contact = ({setOpen}) => {
                 sm:top-6
               "
             >
-              <motion.span
-                animate={{
-                  scale: [1, 1.3, 1],
-                }}
-                transition={{
-                  duration: 1.8,
-                  repeat: Infinity,
-                }}
+              <span
                 className="
                   h-1.5
                   w-1.5
                   rounded-full
                   bg-[#D5D93B]
                   shadow-[0_0_10px_rgba(213,217,59,.9)]
+                  animate-pulse
                 "
               />
 

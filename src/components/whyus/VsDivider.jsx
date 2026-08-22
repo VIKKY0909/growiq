@@ -17,18 +17,6 @@ const VsDivider = () => {
       />
 
       <motion.div
-        animate={{
-          scale: [1, 1.08, 1],
-          boxShadow: [
-            "0 0 0px rgba(213,217,59,0)",
-            "0 0 30px rgba(213,217,59,.45)",
-            "0 0 0px rgba(213,217,59,0)"
-          ]
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 2.5
-        }}
         className="
           relative
           z-10
@@ -43,10 +31,11 @@ const VsDivider = () => {
           bg-[#0F1039]
           text-[#D5D93B]
           font-bold
+          shadow-[0_0_18px_rgba(213,217,59,.30)]
         "
       >
         VS
-      </motion.div>
+      </div>
 
     </div>
   );

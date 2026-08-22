@@ -125,7 +125,7 @@ const Testimonials = () => {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.3,
           }}
           transition={{
@@ -159,7 +159,7 @@ const Testimonials = () => {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.3,
           }}
           transition={{
@@ -197,7 +197,7 @@ const Testimonials = () => {
             opacity: 1,
           }}
           viewport={{
-            once: false,
+            once: true,
           }}
           transition={{
             duration: 0.6,
