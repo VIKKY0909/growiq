@@ -37,11 +37,6 @@ const routes = [
     description: "Book a free strategy consultation call with Groowiq. Speak with India's performance marketing, brand funnel, and SEO/AEO growth specialists."
   },
   {
-    path: "/work",
-    title: "D2C & B2B Case Studies | Groowiq Growth Portfolio",
-    description: "Read verified case studies from Groowiq. See how we scaled a D2C health brand to ₹4.2 Cr revenue at 8.7x ROAS and helped a tech startup lift AI citations by 6.5x."
-  },
-  {
     path: "/guides",
     title: "Marketing Guides & Resources | Groowiq Education Hub",
     description: "Browse marketing tutorials and guides from Groowiq. Get answers on digital agency costs in India, evaluative checklists, and D2C scaling funnels."
@@ -93,23 +88,6 @@ const routes = [
   }
 ];
 
-// Add case study detail routes dynamically for pre-rendering
-const caseStudySlugs = [
-  "entartica-seaworld-full-funnel",
-  "spree-walk-instagram-growth",
-  "echt-marine-linkedin-authority",
-  "uvr-green-energies-web-linkedin",
-  "entartica-multi-city",
-  "client-cards"
-];
-
-caseStudySlugs.forEach((slug) => {
-  routes.push({
-    path: `/work/${slug}`,
-    title: `${slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())} | GROOWiq Case Study`,
-    description: `Read the verified B2B/D2C case study for ${slug.replace(/-/g, " ")}. Learn about our strategy, custom funnels, and real client results.`
-  });
-});
 
 async function prerender() {
   const toAbsolute = (p) => path.resolve(__dirname, p);

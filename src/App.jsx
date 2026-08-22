@@ -12,7 +12,6 @@ import PricingPage from "./pages/PricingPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import IndustriesPage from "./pages/IndustriesPage";
-import WorkPage from "./pages/WorkPage";
 import GuidesPage from "./pages/GuidesPage";
 
 // Scroll to top helper
@@ -74,8 +73,6 @@ function App() {
           <Route path="/contact" element={<ContactPage setOpen={setOpen} />} />
           <Route path="/services/:serviceName" element={<ServicePage />} />
           <Route path="/industries/:industryName" element={<IndustriesPage />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/work/:slug" element={<WorkPage />} />
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="*" element={<HomePage open={open} setOpen={setOpen} />} />
         </Routes>
