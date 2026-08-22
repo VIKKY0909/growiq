@@ -1,48 +1,62 @@
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/layout/Navbar/Navbar";
-import { useTheme } from "./context/ThemeContext";
-import Hero from "./components/hero/Hero"
-import { useState } from "react";
-import LeadModal from "./components/CTA/LeadModel";
-import About from "./components/about/About"
-import Services from "./components/services/Services"
-import WhyUs from "./components/whyus/WhyUs";
-import Process from "./components/process/Process"
-import Testimonials from "./components/testimonials/Testimonials"
-import Contact from "./components/contact/Contact"
 import Footer from "./components/footer/Footer";
-import ClientLogos from "./components/clientsLogo/ClientLogos"
+import LeadModal from "./components/CTA/LeadModel";
+import { useTheme } from "./context/ThemeContext";
+
+// Page Components
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PricingPage from "./pages/PricingPage";
+import ContactPage from "./pages/ContactPage";
+import ServicePage from "./pages/ServicePage";
+import IndustriesPage from "./pages/IndustriesPage";
+import WorkPage from "./pages/WorkPage";
+import GuidesPage from "./pages/GuidesPage";
+
+// Scroll to top helper
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const { darkMode } = useTheme();
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <div
       className={`min-h-screen transition-all duration-500 ${
-        darkMode
-          ? "bg-[#0F1039] text-white"
-          : "bg-white text-[#0F1039]"
+        darkMode ? "bg-[#0F1039] text-white" : "bg-white text-[#0F1039]"
       }`}
     >
-      {/* <Navbar /> */}
-       <Navbar  open={open} setOpen={setOpen}   />
+      <ScrollToTop />
+      
+      <Navbar open={open} setOpen={setOpen} />
 
       <main className="pt-32">
-        {/* Hero Section */}
-        {/* <Hero /> */}
-        <Hero  open={open} setOpen={setOpen}/>
-        <About/>
-        <Services/>
-        <WhyUs/>
-        <Process/>
-        <Testimonials/>
-        <ClientLogos/>
-        <Contact setOpen={setOpen}/>
-        <Footer/>
+        <Routes>
+          <Route path="/" element={<HomePage open={open} setOpen={setOpen} />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/contact" element={<ContactPage setOpen={setOpen} />} />
+          <Route path="/services/:serviceName" element={<ServicePage />} />
+          <Route path="/industries/:industryName" element={<IndustriesPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/guides" element={<GuidesPage />} />
+          <Route path="*" element={<HomePage open={open} setOpen={setOpen} />} />
+        </Routes>
       </main>
-      <LeadModal open={open}
-      onClose={()=> setOpen(false)}
-      />
+
+      <Footer />
+      
+      <LeadModal open={open} onClose={() => setOpen(false)} />
     </div>
   );
 }

@@ -120,6 +120,17 @@ const HeroContent = ({setOpen}) => {
           onClick={() => setOpen(true)}
         />
 
+        {/* Trust Strip */}
+        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs sm:text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400">
+          <div className="flex items-center gap-1.5">
+            <span className="text-yellow-400">★★★★★</span>
+            <span>4.9/5 from 80+ clients</span>
+          </div>
+          <span className="hidden sm:inline text-gray-300 dark:text-white/10">|</span>
+          <div>
+            <span className="text-[#D5D93B]">₹4.2 Cr</span> revenue generated for D2C brands
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );

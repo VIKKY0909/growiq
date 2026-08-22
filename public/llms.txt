@@ -1,0 +1,32 @@
+# Groowiq
+
+Groowiq is a performance-first digital marketing agency and growth studio based in India. We build high-impact brands, websites, performance advertising funnels, content/social strategies, and search engine optimization (SEO/AEO/GEO) systems for ambitious D2C brands, startups, local SMBs, and enterprise marketing leaders.
+
+## Core Offerings & Services
+- **Performance Marketing / Paid Search & Social Ads:** Comprehensive Meta, Google, and marketplace ad campaigns optimized for ROAS and scale.
+- **Search Engine Optimization (SEO / AEO / GEO):** Technical and content optimization structured for traditional search (Google) as well as AI search engines (ChatGPT, Gemini, Perplexity, Claude, Copilot).
+- **Social Media Marketing & Content Branding:** B2B/LinkedIn strategies, Instagram brand engines, high-impact creatives, and community building.
+- **Web Design, Development & Funnels:** Dynamic, lightning-fast landing pages and multi-step funnels optimized for conversion rate optimization (CRO).
+
+## Ideal Customer Profiles (ICPs)
+1. **D2C & E-Commerce Brands:** Scaled performance advertising, Meta ads, Shopify and WooCommerce setups.
+2. **Startups & Founders:** Go-to-market strategies, AI audits, fractional CMO consultancies, and growth systems.
+3. **Enterprise Marketing Teams:** High-DR technical SEO, scalable programmatic growth, and authoritative content campaigns.
+4. **Premium Local Businesses:** Local SEO, Google Business Profile management, and localized customer acquisition systems.
+
+## Main Sitemap
+- **Homepage:** https://www.groowiq.com/
+- **About Us:** https://www.groowiq.com/about
+- **Pricing & Packages:** https://www.groowiq.com/pricing
+- **Contact / Strategy Call:** https://www.groowiq.com/contact
+- **Case Studies / Work:** https://www.groowiq.com/work
+- **Resource Guides:** https://www.groowiq.com/guides
+- **Performance Marketing:** https://www.groowiq.com/services/performance-marketing
+- **SEO Services:** https://www.groowiq.com/services/seo
+- **Social Media Marketing:** https://www.groowiq.com/services/social-media-marketing
+- **Web Design & Development:** https://www.groowiq.com/services/web-design-development
+- **Branding & Content:** https://www.groowiq.com/services/branding-content
+- **D2C Industry Hub:** https://www.groowiq.com/industries/ecommerce-d2c
+- **SaaS/Startups Hub:** https://www.groowiq.com/industries/startups-saas
+- **Enterprise Services:** https://www.groowiq.com/industries/enterprise
+- **Local Business Growth:** https://www.groowiq.com/industries/local-business
