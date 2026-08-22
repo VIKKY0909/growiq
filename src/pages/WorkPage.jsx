@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Container from "../components/common/Container";
 import Button from "../components/common/Button";
+import { ArrowRight, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
+// Case Studies text data for SEO/AEO crawlers (route: /work/:slug)
 const caseStudiesData = {
   "entartica-seaworld-full-funnel": {
     slug: "entartica-seaworld-full-funnel",
@@ -86,7 +89,7 @@ const caseStudiesData = {
       "14 comments (+366.7%)"
     ],
     aeoTitle: "How did GROOWiq do it?",
-    aeoAnswer: "We transformed standard corporate announcements into high-value B2B industry commentary. By structuring technical manufacturing challenges and industry updates as narrative posts, ECHT Marine established high-trust executive positioning on LinkedIn.",
+    aeoAnswer: "We transformed standard corporate announcements into B2B industry commentary. By structuring technical manufacturing challenges and industry updates as narrative posts, ECHT Marine established high-trust executive positioning on LinkedIn.",
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -212,10 +215,141 @@ const caseStudiesData = {
   }
 };
 
+// Visual Showcase data representing existing portfolio pages
+const featuredProjects = [
+  {
+    num: "01",
+    id: "entartica-showcase",
+    title: "Entartica",
+    category: "Social Campaign",
+    description: "Campaign creatives for a premium water experience brand.",
+    image: "/images/portfolio/page_2.png",
+    brief: "Develop high-converting visual assets and video frameworks to scale regional bookings across Raipur, Coimbatore, and central India.",
+    approach: "Combined wide-angle drone shots of speedboats and water leisure with modern social overlays and clear CTA bands to capture immediate action.",
+    selectedWork: ["/images/portfolio/page_2.png", "/images/portfolio/page_1.png", "/images/portfolio/page_7.png"]
+  },
+  {
+    num: "02",
+    id: "real-estate-showcase",
+    title: "Watten House & Chuan Park",
+    category: "Real Estate",
+    description: "Property marketing and architectural layouts for premium developments.",
+    image: "/images/portfolio/page_9.png",
+    brief: "Establish high-trust digital assets and brochure structures to communicate prime opportunities andWatten House developments.",
+    approach: "Structured clean, grid-based layouts focusing on high-resolution architectural mockups, clean typography, and core investment highlights.",
+    selectedWork: ["/images/portfolio/page_9.png", "/images/portfolio/page_8.png", "/images/portfolio/page_10.png"]
+  },
+  {
+    num: "03",
+    id: "packaging-showcase",
+    title: "Muthafuckin Pistachios",
+    category: "Packaging",
+    description: "Bold, premium packaging styling for consumer packaged goods.",
+    image: "/images/portfolio/page_15.png",
+    brief: "Design eye-catching packaging mockups for premium salted pistachios and Tan Lotion cosmetics that command retail shelf attention.",
+    approach: "Balanced bold, high-contrast text block naming with sleek near-black layouts, highlighting the product visual at the lower grid section.",
+    selectedWork: ["/images/portfolio/page_15.png"]
+  },
+  {
+    num: "04",
+    id: "web-showcase",
+    title: "LA Lounge",
+    category: "Website / Web Design",
+    description: "Digital storefront and premium web layouts for architectural lighting studios.",
+    image: "/images/portfolio/page_16.png",
+    brief: "Rebuild custom lightning-fast React interfaces and digital bridal catalog experiences that load in under 2 seconds.",
+    approach: "Created a minimalist, editorial layout with generous whitespace, high-fashion styling grids, and responsive design systems.",
+    selectedWork: ["/images/portfolio/page_16.png", "/images/portfolio/page_17.png"]
+  }
+];
+
+const archiveProjects = [
+  ...featuredProjects,
+  {
+    num: "05",
+    id: "bidx-showcase",
+    title: "BidX Billboards",
+    category: "Outdoor",
+    description: "Realistic outdoor mockups and highway DSP display creatives.",
+    image: "/images/portfolio/page_11.png",
+    brief: "Produce bold, highly legible billboard creatives for digital-ads webinars and Amazon DSP strategy showcases.",
+    approach: "Utilized high-contrast blue backgrounds, clear device graphics, and minimal large headlines optimized for 3-second readability.",
+    selectedWork: ["/images/portfolio/page_11.png", "/images/portfolio/page_12.png"]
+  },
+  {
+    num: "06",
+    id: "cognible-showcase",
+    title: "Cognible Tactics",
+    category: "Print",
+    description: "Verbal design manuals, brochures, and automotive distributor catalogs.",
+    image: "/images/portfolio/page_14.png",
+    brief: "Develop high-end layouts for Force Supreme catalogs, Rest API manuals, and corporate brochures.",
+    approach: "Mapped clean informational grids with light editorial styling, clear diagram breakouts, and spacious text boxes.",
+    selectedWork: ["/images/portfolio/page_14.png", "/images/portfolio/page_13.png"]
+  },
+  {
+    num: "07",
+    id: "curries-showcase",
+    title: "Curries Holi",
+    category: "Social",
+    description: "Holi and happiness digital campaign designs for cloud kitchens.",
+    image: "/images/portfolio/page_4.png",
+    brief: "Create vibrant, highly shareable food-brand greeting templates and weekend shows listings.",
+    approach: "Blended artistic culinary illustrations with friendly, curved script headings and high-saturation colors.",
+    selectedWork: ["/images/portfolio/page_4.png", "/images/portfolio/page_3.png"]
+  },
+  {
+    num: "08",
+    id: "forte-showcase",
+    title: "Forte Haircare",
+    category: "Social",
+    description: "D2C haircare ad creative concepts and oil-buildup campaigns.",
+    image: "/images/portfolio/page_5.png",
+    brief: "Design conversion-focused Instagram grids and D2C product-benefit mockups.",
+    approach: "Combined bright blue product-benefit styling callouts with professional model photography for clean product positioning.",
+    selectedWork: ["/images/portfolio/page_5.png", "/images/portfolio/page_7.png"]
+  },
+  {
+    num: "09",
+    id: "just-interiors-showcase",
+    title: "Just Interiors",
+    category: "Social",
+    description: "Interior design quote layouts and high-end room visual grids.",
+    image: "/images/portfolio/page_6.png",
+    brief: "Produce elegant, architectural social assets to communicate luxurious design philosophy.",
+    approach: "Emphasized large space visuals with sophisticated typography guidelines and a clean, centered text alignment.",
+    selectedWork: ["/images/portfolio/page_6.png"]
+  }
+];
+
+// Mapping helper to category filters
+const categoryMap = {
+  All: "All",
+  Social: "Social",
+  "Real Estate": "Real Estate",
+  Outdoor: "Outdoor",
+  Print: "Print",
+  Packaging: "Packaging",
+  Web: "Website / Web Design"
+};
+
 const WorkPage = () => {
   const { slug } = useParams();
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedShowcase, setSelectedShowcase] = useState(null);
 
-  // If a slug is provided, render the specific case study page
+  // Close showcase on Escape key
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedShowcase(null);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // SEO / AEO Dynamic route mapping
   if (slug && caseStudiesData[slug]) {
     const study = caseStudiesData[slug];
 
@@ -243,7 +377,7 @@ const WorkPage = () => {
     };
 
     return (
-      <div className="py-20">
+      <div className="py-20 bg-[#0F1039] text-white min-h-screen">
         <script type="application/ld+json">
           {JSON.stringify(study.schema)}
         </script>
@@ -253,7 +387,7 @@ const WorkPage = () => {
 
         <Container>
           {/* Breadcrumbs */}
-          <nav className="text-sm font-semibold tracking-wide text-gray-500 mb-8 dark:text-gray-400">
+          <nav className="text-sm font-semibold tracking-wide text-gray-400 mb-8">
             <Link to="/" className="hover:text-[#D5D93B] transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <Link to="/work" className="hover:text-[#D5D93B] transition-colors">Work</Link>
@@ -262,24 +396,24 @@ const WorkPage = () => {
           </nav>
 
           {/* H1 Headline */}
-          <h1 className="text-3xl sm:text-5xl font-black leading-tight text-[#0F1039] dark:text-white max-w-4xl">
+          <h1 className="text-3xl sm:text-5xl font-black leading-tight text-white max-w-4xl">
             {study.h1}
           </h1>
 
-          <p className="text-xs text-gray-400 dark:text-gray-500 font-bold uppercase tracking-wider mt-4">
+          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mt-4">
             {study.serviceIndustry}
           </p>
 
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-8 max-w-3xl">
+          <p className="mt-6 text-lg text-gray-300 leading-8 max-w-3xl">
             {study.intro}
           </p>
 
           {/* Results List */}
-          <div className="my-10 bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-200/50 dark:border-white/10">
-            <h3 className="text-lg font-bold text-[#0F1039] dark:text-white mb-4">Results (Verbatim from client deck)</h3>
+          <div className="my-10 bg-white/5 p-8 rounded-3xl border border-white/10">
+            <h3 className="text-lg font-bold text-white mb-4">Results (Verbatim from client deck)</h3>
             <ul className="space-y-4">
               {study.metrics.map((metric, index) => (
-                <li key={index} className="flex items-start gap-3 text-base text-gray-700 dark:text-gray-200">
+                <li key={index} className="flex items-start gap-3 text-base text-gray-200">
                   <span className="text-[#D5D93B] font-bold">✓</span>
                   <span>{metric}</span>
                 </li>
@@ -289,18 +423,18 @@ const WorkPage = () => {
 
           {/* AEO Answer Block */}
           <div className="my-12">
-            <h2 className="text-2xl font-black text-[#0F1039] dark:text-white mb-3">{study.aeoTitle}</h2>
-            <p className="text-base sm:text-lg leading-8 text-gray-600 dark:text-gray-300 bg-[#D5D93B]/10 border-l-4 border-[#D5D93B] p-6 rounded-r-2xl font-semibold">
+            <h2 className="text-2xl font-black text-white mb-3">{study.aeoTitle}</h2>
+            <p className="text-base sm:text-lg leading-8 text-gray-200 bg-[#D5D93B]/10 border-l-4 border-[#D5D93B] p-6 rounded-r-2xl font-semibold">
               {study.aeoAnswer}
             </p>
           </div>
 
           {/* FAQ Block */}
-          <div className="my-16 border-t border-gray-100 dark:border-white/10 pt-10">
-            <h3 className="text-xl font-bold text-[#0F1039] dark:text-white mb-4">FAQ</h3>
-            <div className="bg-white/50 dark:bg-white/2 p-6 rounded-2xl border border-gray-100/60 dark:border-white/5 max-w-3xl">
-              <h4 className="font-bold text-gray-800 dark:text-white mb-2">{study.faq.q}</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-6">{study.faq.a}</p>
+          <div className="my-16 border-t border-white/10 pt-10">
+            <h3 className="text-xl font-bold text-white mb-4">FAQ</h3>
+            <div className="bg-white/2 p-6 rounded-2xl border border-white/5 max-w-3xl">
+              <h4 className="font-bold text-white mb-2">{study.faq.q}</h4>
+              <p className="text-sm text-gray-300 leading-6">{study.faq.a}</p>
             </div>
           </div>
         </Container>
@@ -308,61 +442,261 @@ const WorkPage = () => {
     );
   }
 
-  // Otherwise, render the list view of all case studies
+  // Visual Creative Showcase overview page (route: /work)
   useEffect(() => {
-    document.title = "D2C & B2B Case Studies | Groowiq Growth Portfolio";
+    document.title = "Selected Creative Work | GROOWiq Portfolio";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Read verified case studies from Groowiq. See how we scaled a D2C health brand to ₹4.2 Cr revenue at 8.7x ROAS and helped a tech startup lift AI citations by 6.5x."
+        "Browse GROOWiq's premium design portfolio. Features social media campaigns, real estate, outdoor banners, packaging, and high-performance websites."
       );
     }
   }, []);
 
-  return (
-    <div className="py-20">
-      <Container>
-        {/* Breadcrumbs */}
-        <nav className="text-sm font-semibold tracking-wide text-gray-500 mb-8 dark:text-gray-400">
-          <Link to="/" className="hover:text-[#D5D93B] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[#D5D93B] font-bold">Work</span>
-        </nav>
+  const filteredArchive = archiveProjects.filter((project) => {
+    if (activeCategory === "All") return true;
+    return project.category === categoryMap[activeCategory];
+  });
 
-        {/* Header */}
-        <div className="mb-16">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D5D93B] mb-3">Our Work</p>
-          <h1 className="text-4xl sm:text-5xl font-black leading-tight text-[#0F1039] dark:text-white max-w-4xl">
-            Real Metrics. No Invented Numbers.
+  return (
+    <div className="bg-[#0D0D2B] text-white min-h-screen py-20 transition-all duration-500">
+      <Container>
+        {/* Editorial Heading Section */}
+        <div className="max-w-4xl mb-24">
+          <p className="text-xs font-black uppercase tracking-[0.3em] text-[#D5D93B] mb-4">OUR WORK</p>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tight text-white leading-[1.05] mb-6">
+            Selected work.
+            <br />
+            Built to get noticed.
           </h1>
-          <p className="mt-4 text-base text-gray-500 dark:text-gray-400 max-w-2xl leading-7">
-            Every client result listed below comes straight from our performance reviews. We map every ad rupee to business outcomes, not vanity indicators.
+          <p className="text-sm sm:text-base text-gray-400 font-semibold tracking-wide max-w-xl">
+            Branding, campaigns, content and digital experiences created across industries.
           </p>
         </div>
 
-        {/* Case Studies Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {Object.values(caseStudiesData).map((study) => (
-            <div
-              key={study.slug}
-              className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-[32px] p-8 flex flex-col justify-between shadow-sm hover:border-[#D5D93B]/50 transition-all duration-300"
-            >
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#D5D93B]">{study.serviceIndustry}</span>
-                <h3 className="text-2xl font-bold text-[#0F1039] dark:text-white mt-2 leading-tight">{study.h1}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-300 mt-4 leading-6 line-clamp-3">{study.intro}</p>
-              </div>
+        {/* =========================================
+            FEATURED / SELECTED WORK SECTION
+        ========================================= */}
+        <div className="mb-28">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-10">SELECTED WORK</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {featuredProjects.map((project, idx) => (
+              <div
+                key={project.id}
+                onClick={() => setSelectedShowcase(project)}
+                className="group cursor-pointer flex flex-col justify-between"
+              >
+                <div>
+                  <div className="relative overflow-hidden rounded-[24px] aspect-[4/3] bg-[#121233] border border-white/5">
+                    {/* Background Number */}
+                    <div className="absolute top-4 left-6 text-7xl sm:text-8xl font-black text-white/5 select-none z-0">
+                      {project.num}
+                    </div>
+                    {/* Visual */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] relative z-10"
+                    />
+                    {/* Dark Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#0D0D2B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-8">
+                      <div className="text-xs font-bold uppercase tracking-wider text-[#D5D93B]">{project.category}</div>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="text-2xl font-black text-white">{project.title}</h3>
+                          <p className="text-xs text-gray-400 mt-1">{project.description}</p>
+                        </div>
+                        <span className="text-[#D5D93B] text-xl font-bold">→</span>
+                      </div>
+                    </div>
+                  </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
-                <Link to={`/work/${study.slug}`} className="text-[#D5D93B] text-sm font-bold hover:underline">
-                  Read Case Study →
-                </Link>
+                  <div className="mt-6 flex items-center justify-between">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-wider text-gray-500 mb-1">{project.category}</p>
+                      <h3 className="text-2xl font-extrabold tracking-tight text-white">{project.title}</h3>
+                    </div>
+                    <span className="text-gray-600 group-hover:text-[#D5D93B] transition-colors text-lg">
+                      {project.num} / 04
+                    </span>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* =========================================
+            COMPLETE WORK ARCHIVE WITH FILTERS
+        ========================================= */}
+        <div id="archive" className="border-t border-white/10 pt-20">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-gray-500">COMPLETE ARCHIVE</h2>
+            
+            {/* Category Filter Tabs */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none max-w-full">
+              {Object.keys(categoryMap).map((catName) => (
+                <button
+                  key={catName}
+                  type="button"
+                  onClick={() => setActiveCategory(catName)}
+                  className={`text-xs font-semibold px-4 py-2 rounded-full border transition-all duration-300 whitespace-nowrap focus:outline-none ${
+                    activeCategory === catName
+                      ? "border-[#D5D93B] text-[#D5D93B] bg-[#D5D93B]/5 font-black"
+                      : "border-white/10 text-gray-400 hover:text-white hover:border-white/30"
+                  }`}
+                >
+                  {catName}
+                </button>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Asymmetric / Editorial Masonry Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {filteredArchive.map((project, idx) => {
+              // Custom grids configuration to make masonry visual rhythm
+              const isLarge = idx % 4 === 0 || idx === 5;
+              const gridClass = isLarge
+                ? "col-span-1 md:col-span-2 aspect-[16/10]"
+                : "col-span-1 aspect-[3/4] md:aspect-[4/5]";
+
+              return (
+                <div
+                  key={`${project.id}-archive`}
+                  onClick={() => setSelectedShowcase(project)}
+                  className={`group cursor-pointer flex flex-col justify-between ${gridClass}`}
+                >
+                  <div className="relative w-full h-full overflow-hidden rounded-[20px] bg-[#121233] border border-white/5">
+                    {/* Background Number */}
+                    <div className="absolute top-4 left-6 text-7xl font-black text-white/5 select-none z-0">
+                      {project.num}
+                    </div>
+                    {/* Visual */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] relative z-10"
+                    />
+                    {/* Dark Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#0D0D2B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-6">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#D5D93B]">{project.category}</span>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="text-xl font-bold text-white">{project.title}</h4>
+                          <p className="text-xs text-gray-400 mt-1">{project.description}</p>
+                        </div>
+                        <span className="text-[#D5D93B] font-bold">→</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </Container>
+
+      {/* =========================================
+          OPTION A: PREMIUM PROJECT SHOWCASE MODAL
+      ========================================= */}
+      <AnimatePresence>
+        {selectedShowcase && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] overflow-y-auto bg-[#0D0D2B]/95 backdrop-blur-md p-4 sm:p-10"
+          >
+            <div className="max-w-6xl mx-auto bg-[#121233] rounded-[40px] border border-white/10 overflow-hidden relative shadow-2xl">
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setSelectedShowcase(null)}
+                aria-label="Close case study"
+                className="absolute top-6 right-6 z-[110] bg-[#0D0D2B] border border-white/10 rounded-full h-12 w-12 flex items-center justify-center text-white hover:text-[#D5D93B] hover:border-[#D5D93B]/50 transition-all focus:outline-none"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="p-8 sm:p-16">
+                {/* Header */}
+                <div className="mb-10">
+                  <div className="text-xs font-black text-[#D5D93B] uppercase tracking-widest mb-2">
+                    {selectedShowcase.num} / {selectedShowcase.category}
+                  </div>
+                  <h2 className="text-3xl sm:text-5xl font-black text-white">{selectedShowcase.title}</h2>
+                  <p className="text-xs text-gray-400 mt-2">Services: Creative Direction, Campaign Scaling, Asset Design</p>
+                </div>
+
+                {/* Hero visual */}
+                <div className="rounded-3xl overflow-hidden aspect-[16/9] mb-12 bg-[#0D0D2B] border border-white/5">
+                  <img
+                    src={selectedShowcase.image}
+                    alt={selectedShowcase.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Brief & Approach */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm sm:text-base leading-7 mb-16">
+                  <div>
+                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">01 / THE BRIEF</h4>
+                    <p className="text-gray-300">{selectedShowcase.brief}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">02 / APPROACH</h4>
+                    <p className="text-gray-300">{selectedShowcase.approach}</p>
+                  </div>
+                </div>
+
+                {/* Curated Layout / Selected work */}
+                <div>
+                  <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-8">03 / CREATIVE ASSETS</h4>
+                  
+                  <div className="space-y-10">
+                    {selectedShowcase.selectedWork.map((assetPath, idx) => {
+                      const isFull = idx === 0 || selectedShowcase.selectedWork.length === 1;
+                      const sizeClass = isFull
+                        ? "w-full rounded-2xl border border-white/5"
+                        : "w-full rounded-2xl border border-white/5 aspect-square object-cover";
+
+                      return (
+                        <div key={idx} className="overflow-hidden bg-[#0D0D2B] rounded-3xl">
+                          <img
+                            src={assetPath}
+                            alt={`${selectedShowcase.title} asset ${idx}`}
+                            className={sizeClass}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Footer Action */}
+                <div className="mt-16 pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-white">Let's scale your brand's creatives.</h4>
+                    <p className="text-xs text-gray-400 mt-1">Chat directly with our creative director on WhatsApp.</p>
+                  </div>
+                  <a
+                    href="https://wa.me/918511822796"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#D5D93B] text-[#0F1039] font-black px-6 py-3.5 text-sm rounded-full">
+                      Start Consultation
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
