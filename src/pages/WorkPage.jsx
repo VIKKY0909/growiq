@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Container from "../components/common/Container";
 import Button from "../components/common/Button";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Case Studies text data for SEO/AEO crawlers (route: /work/:slug)
@@ -89,7 +89,7 @@ const caseStudiesData = {
       "14 comments (+366.7%)"
     ],
     aeoTitle: "How did GROOWiq do it?",
-    aeoAnswer: "We transformed standard corporate announcements into B2B industry commentary. By structuring technical manufacturing challenges and industry updates as narrative posts, ECHT Marine established high-trust executive positioning on LinkedIn.",
+    aeoAnswer: "We transformed standard corporate announcements into B2B B2B insights. By structuring expert commentary around marine manufacturing trends and manufacturing efficiency, ECHT Marine established high-trust executive positioning on LinkedIn.",
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -158,7 +158,7 @@ const caseStudiesData = {
       "Consistent low-CPA booking leads across Raipur and Coimbatore"
     ],
     aeoTitle: "How did GROOWiq do it?",
-    aeoAnswer: "By templates of our high-performing Meta campaign structures and landing page architectures, we scaled campaigns across multiple regional hubs. This allowed rapid market penetration with minimum setup latency and optimized local targeting.",
+    aeoAnswer: "By templates of our high-performing Meta campaign structures and landing page architectures, we scaled campaigns across multiple regional hubs. This allowed market penetration with minimum setup latency and optimized local targeting.",
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -219,47 +219,47 @@ const caseStudiesData = {
 const featuredProjects = [
   {
     num: "01",
-    id: "entartica-showcase",
-    title: "Entartica",
+    id: "nagaon-beach-showcase",
+    title: "South Nagaon Beach",
     category: "Social Campaign",
-    description: "Campaign creatives for a premium water experience brand.",
-    image: "/images/portfolio/page_2.png",
-    brief: "Develop high-converting visual assets and video frameworks to scale regional bookings across Raipur, Coimbatore, and central India.",
-    approach: "Combined wide-angle drone shots of speedboats and water leisure with modern social overlays and clear CTA bands to capture immediate action.",
-    selectedWork: ["/images/portfolio/page_2.png", "/images/portfolio/page_1.png", "/images/portfolio/page_7.png"]
+    description: "Premium landscape/portrait sea-themed posts.",
+    image: "/images/portfolio/page_1.png",
+    brief: "Develop high-end, premium social media creatives to establish brand presence for South Nagaon Beach.",
+    approach: "Combined cinematic sea wave photography with luxury serif fonts, capturing both still and moving water concepts.",
+    selectedWork: ["/images/portfolio/page_1.png", "/images/portfolio/page_2.png"]
   },
   {
     num: "02",
-    id: "real-estate-showcase",
+    id: "watten-house-showcase",
     title: "Watten House & Chuan Park",
     category: "Real Estate",
-    description: "Property marketing and architectural layouts for premium developments.",
-    image: "/images/portfolio/page_9.png",
-    brief: "Establish high-trust digital assets and brochure structures to communicate prime opportunities andWatten House developments.",
-    approach: "Structured clean, grid-based layouts focusing on high-resolution architectural mockups, clean typography, and core investment highlights.",
-    selectedWork: ["/images/portfolio/page_9.png", "/images/portfolio/page_8.png", "/images/portfolio/page_10.png"]
+    description: "Property marketing and architectural campaigns.",
+    image: "/images/portfolio/page_12.png",
+    brief: "Design digital property flyers, brochure grids, and launch posters for premium residential developments.",
+    approach: "Used minimal grid framing, large structural previews, and clean informational tables to highlight freehold properties.",
+    selectedWork: ["/images/portfolio/page_12.png", "/images/portfolio/page_13.png", "/images/portfolio/page_14.png", "/images/portfolio/page_15.png", "/images/portfolio/page_16.png"]
   },
   {
     num: "03",
     id: "packaging-showcase",
     title: "Muthafuckin Pistachios",
     category: "Packaging",
-    description: "Bold, premium packaging styling for consumer packaged goods.",
-    image: "/images/portfolio/page_15.png",
-    brief: "Design eye-catching packaging mockups for premium salted pistachios and Tan Lotion cosmetics that command retail shelf attention.",
-    approach: "Balanced bold, high-contrast text block naming with sleek near-black layouts, highlighting the product visual at the lower grid section.",
-    selectedWork: ["/images/portfolio/page_15.png"]
+    description: "Bold packaging layouts for salted pistachios & tan lotions.",
+    image: "/images/portfolio/page_23.png",
+    brief: "Create packaging boxes and pouch mockups that pop against standard shelf grids.",
+    approach: "Balanced minimal text layout, large product visualization, and a deep-navy backdrop context.",
+    selectedWork: ["/images/portfolio/page_23.png", "/images/portfolio/page_24.png"]
   },
   {
     num: "04",
     id: "web-showcase",
-    title: "LA Lounge",
+    title: "LA Lounge & Bessette Bridal",
     category: "Website / Web Design",
-    description: "Digital storefront and premium web layouts for architectural lighting studios.",
-    image: "/images/portfolio/page_16.png",
-    brief: "Rebuild custom lightning-fast React interfaces and digital bridal catalog experiences that load in under 2 seconds.",
-    approach: "Created a minimalist, editorial layout with generous whitespace, high-fashion styling grids, and responsive design systems.",
-    selectedWork: ["/images/portfolio/page_16.png", "/images/portfolio/page_17.png"]
+    description: "Digital bridal shops and architectural lighting storefronts.",
+    image: "/images/portfolio/page_26.png",
+    brief: "Design responsive, clean layout web pages optimized for fast load speed.",
+    approach: "Implemented generous whitespace, sophisticated visual grids, and minimalist navigation structures.",
+    selectedWork: ["/images/portfolio/page_25.png", "/images/portfolio/page_26.png", "/images/portfolio/page_27.png", "/images/portfolio/page_28.png"]
   }
 ];
 
@@ -267,58 +267,58 @@ const archiveProjects = [
   ...featuredProjects,
   {
     num: "05",
-    id: "bidx-showcase",
-    title: "BidX Billboards",
-    category: "Outdoor",
-    description: "Realistic outdoor mockups and highway DSP display creatives.",
-    image: "/images/portfolio/page_11.png",
-    brief: "Produce bold, highly legible billboard creatives for digital-ads webinars and Amazon DSP strategy showcases.",
-    approach: "Utilized high-contrast blue backgrounds, clear device graphics, and minimal large headlines optimized for 3-second readability.",
-    selectedWork: ["/images/portfolio/page_11.png", "/images/portfolio/page_12.png"]
+    id: "entartica-showcase",
+    title: "Entartica Seaworld",
+    category: "Social",
+    description: "Water park booking banners and boat shows invites.",
+    image: "/images/portfolio/page_3.png",
+    brief: "Create conversion-oriented digital invites and ad creatives for water sports and resorts.",
+    approach: "Merged vertical speedboat drone views with bright overlays and Cochin location maps.",
+    selectedWork: ["/images/portfolio/page_3.png", "/images/portfolio/page_4.png"]
   },
   {
     num: "06",
-    id: "cognible-showcase",
-    title: "Cognible Tactics",
-    category: "Print",
-    description: "Verbal design manuals, brochures, and automotive distributor catalogs.",
-    image: "/images/portfolio/page_14.png",
-    brief: "Develop high-end layouts for Force Supreme catalogs, Rest API manuals, and corporate brochures.",
-    approach: "Mapped clean informational grids with light editorial styling, clear diagram breakouts, and spacious text boxes.",
-    selectedWork: ["/images/portfolio/page_14.png", "/images/portfolio/page_13.png"]
+    id: "hungrite-showcase",
+    title: "Hungrite Shows",
+    category: "Social",
+    description: "Multi-city show lists and weekend scheduling grids.",
+    image: "/images/portfolio/page_5.png",
+    brief: "Design clear, highly legible weekend calendar schedules for cloud kitchens.",
+    approach: "Paired custom cartoon graphics with high-contrast dates boxes and menu items.",
+    selectedWork: ["/images/portfolio/page_5.png", "/images/portfolio/page_6.png", "/images/portfolio/page_7.png"]
   },
   {
     num: "07",
-    id: "curries-showcase",
-    title: "Curries Holi",
-    category: "Social",
-    description: "Holi and happiness digital campaign designs for cloud kitchens.",
-    image: "/images/portfolio/page_4.png",
-    brief: "Create vibrant, highly shareable food-brand greeting templates and weekend shows listings.",
-    approach: "Blended artistic culinary illustrations with friendly, curved script headings and high-saturation colors.",
-    selectedWork: ["/images/portfolio/page_4.png", "/images/portfolio/page_3.png"]
-  },
-  {
-    num: "08",
     id: "forte-showcase",
     title: "Forte Haircare",
     category: "Social",
-    description: "D2C haircare ad creative concepts and oil-buildup campaigns.",
-    image: "/images/portfolio/page_5.png",
-    brief: "Design conversion-focused Instagram grids and D2C product-benefit mockups.",
-    approach: "Combined bright blue product-benefit styling callouts with professional model photography for clean product positioning.",
-    selectedWork: ["/images/portfolio/page_5.png", "/images/portfolio/page_7.png"]
+    description: "D2C skincare benefits grids and Easter events cards.",
+    image: "/images/portfolio/page_9.png",
+    brief: "Create digital ad campaigns to showcase product value and holiday discounts.",
+    approach: "Balanced clean product shots with blue-backed customer reviews and target pain-point lists.",
+    selectedWork: ["/images/portfolio/page_8.png", "/images/portfolio/page_9.png"]
+  },
+  {
+    num: "08",
+    id: "bidx-showcase",
+    title: "BidX Billboards",
+    category: "Outdoor",
+    description: "DSP webinar posters and highway billboard mockups.",
+    image: "/images/portfolio/page_17.png",
+    brief: "Design large-scale highway displays optimized for rapid reading speed.",
+    approach: "Leveraged bold text, simple device framing, and clean vector shapes.",
+    selectedWork: ["/images/portfolio/page_17.png", "/images/portfolio/page_18.png"]
   },
   {
     num: "09",
-    id: "just-interiors-showcase",
-    title: "Just Interiors",
-    category: "Social",
-    description: "Interior design quote layouts and high-end room visual grids.",
-    image: "/images/portfolio/page_6.png",
-    brief: "Produce elegant, architectural social assets to communicate luxurious design philosophy.",
-    approach: "Emphasized large space visuals with sophisticated typography guidelines and a clean, centered text alignment.",
-    selectedWork: ["/images/portfolio/page_6.png"]
+    id: "cognible-showcase",
+    title: "Cognible Manuals",
+    category: "Print",
+    description: "API processes booklets and Force distributor grids.",
+    image: "/images/portfolio/page_20.png",
+    brief: "Design print catalogs and corporate product brochures.",
+    approach: "Combined corporate blue tones with clean photo blocks and technical specification sheets.",
+    selectedWork: ["/images/portfolio/page_19.png", "/images/portfolio/page_20.png", "/images/portfolio/page_21.png", "/images/portfolio/page_22.png"]
   }
 ];
 
@@ -482,26 +482,26 @@ const WorkPage = () => {
           <h2 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-10">SELECTED WORK</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {featuredProjects.map((project, idx) => (
+            {featuredProjects.map((project) => (
               <div
                 key={project.id}
                 onClick={() => setSelectedShowcase(project)}
                 className="group cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="relative overflow-hidden rounded-[24px] aspect-[4/3] bg-[#121233] border border-white/5">
+                  <div className="relative overflow-hidden rounded-[24px] bg-[#121233] border border-white/5 p-0">
                     {/* Background Number */}
                     <div className="absolute top-4 left-6 text-7xl sm:text-8xl font-black text-white/5 select-none z-0">
                       {project.num}
                     </div>
-                    {/* Visual */}
+                    {/* Visual - Exact height auto to maintain true aspect ratio without cropping */}
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] relative z-10"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] relative z-10 block"
                     />
                     {/* Dark Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#0D0D2B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-8">
+                    <div className="absolute inset-0 bg-[#0D0D2B]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-8">
                       <div className="text-xs font-bold uppercase tracking-wider text-[#D5D93B]">{project.category}</div>
                       <div className="flex items-center justify-between">
                         <div>
@@ -557,31 +557,29 @@ const WorkPage = () => {
           {/* Asymmetric / Editorial Masonry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {filteredArchive.map((project, idx) => {
-              // Custom grids configuration to make masonry visual rhythm
+              // Custom span settings to create asymmetric flow
               const isLarge = idx % 4 === 0 || idx === 5;
-              const gridClass = isLarge
-                ? "col-span-1 md:col-span-2 aspect-[16/10]"
-                : "col-span-1 aspect-[3/4] md:aspect-[4/5]";
+              const colSpan = isLarge ? "col-span-1 md:col-span-2" : "col-span-1";
 
               return (
                 <div
                   key={`${project.id}-archive`}
                   onClick={() => setSelectedShowcase(project)}
-                  className={`group cursor-pointer flex flex-col justify-between ${gridClass}`}
+                  className={`group cursor-pointer flex flex-col justify-between ${colSpan}`}
                 >
-                  <div className="relative w-full h-full overflow-hidden rounded-[20px] bg-[#121233] border border-white/5">
+                  <div className="relative w-full overflow-hidden rounded-[20px] bg-[#121233] border border-white/5 p-0">
                     {/* Background Number */}
                     <div className="absolute top-4 left-6 text-7xl font-black text-white/5 select-none z-0">
                       {project.num}
                     </div>
-                    {/* Visual */}
+                    {/* Visual - Exact ratio maintained */}
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] relative z-10"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] relative z-10 block"
                     />
                     {/* Dark Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#0D0D2B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-6">
+                    <div className="absolute inset-0 bg-[#0D0D2B]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-between p-6">
                       <span className="text-[10px] font-bold uppercase tracking-wider text-[#D5D93B]">{project.category}</span>
                       <div className="flex items-center justify-between">
                         <div>
@@ -631,12 +629,12 @@ const WorkPage = () => {
                   <p className="text-xs text-gray-400 mt-2">Services: Creative Direction, Campaign Scaling, Asset Design</p>
                 </div>
 
-                {/* Hero visual */}
-                <div className="rounded-3xl overflow-hidden aspect-[16/9] mb-12 bg-[#0D0D2B] border border-white/5">
+                {/* Hero visual - exact size, no padding/cropping space */}
+                <div className="rounded-3xl overflow-hidden mb-12 bg-[#0D0D2B] border border-white/5 p-0">
                   <img
                     src={selectedShowcase.image}
                     alt={selectedShowcase.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain block"
                   />
                 </div>
 
@@ -658,17 +656,12 @@ const WorkPage = () => {
                   
                   <div className="space-y-10">
                     {selectedShowcase.selectedWork.map((assetPath, idx) => {
-                      const isFull = idx === 0 || selectedShowcase.selectedWork.length === 1;
-                      const sizeClass = isFull
-                        ? "w-full rounded-2xl border border-white/5"
-                        : "w-full rounded-2xl border border-white/5 aspect-square object-cover";
-
                       return (
-                        <div key={idx} className="overflow-hidden bg-[#0D0D2B] rounded-3xl">
+                        <div key={idx} className="overflow-hidden bg-[#0D0D2B] rounded-3xl p-0 border border-white/5">
                           <img
                             src={assetPath}
                             alt={`${selectedShowcase.title} asset ${idx}`}
-                            className={sizeClass}
+                            className="w-full h-auto object-contain block"
                           />
                         </div>
                       );
