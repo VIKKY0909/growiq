@@ -155,6 +155,8 @@ const MobileMenu = ({ onGrow }) => {
                         <button
                           type="button"
                           onClick={() => toggleSection(item.id)}
+                          aria-expanded={expandedSection === item.id}
+                          aria-controls={`mobile-dropdown-${item.id}`}
                           className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-white/[0.04]"
                         >
                           <span className="text-sm font-semibold text-[#0F1039] dark:text-white">
@@ -169,6 +171,7 @@ const MobileMenu = ({ onGrow }) => {
                         <AnimatePresence>
                           {expandedSection === item.id && (
                             <motion.div
+                              id={`mobile-dropdown-${item.id}`}
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}

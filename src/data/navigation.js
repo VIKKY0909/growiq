@@ -8,8 +8,8 @@ export const navLinks = [
       { title: "SEO & AEO Services", path: "/services/seo" },
       { title: "Performance Marketing", path: "/services/performance-marketing" },
       { title: "Social Media Marketing", path: "/services/social-media-marketing" },
-      { title: "Web Design & Funnels", path: "/services/web-design-development" },
-      { title: "Branding & Content Strategy", path: "/services/branding-content" }
+      { title: "Web Design & Funnels", path: "/services/web-development" },
+      { title: "Branding & Content Strategy", path: "/services/branding" }
     ]
   },
   {

@@ -15,7 +15,7 @@ const routes = [
       "@type": "Organization",
       "name": "Groowiq",
       "url": "https://www.groowiq.com",
-      "logo": "https://www.groowiq.com/logo/GROOW%20IQ%20Final%20Logo.webp",
+      "logo": "https://www.groowiq.com/logo/logo.png",
       "sameAs": [
         "https://www.linkedin.com/company/groowiq"
       ]
@@ -29,7 +29,7 @@ const routes = [
   {
     path: "/pricing",
     title: "Digital Marketing Pricing & Packages in India | Groowiq",
-    description: "View transparent digital marketing package prices at Groowiq India. Pricing starting at ₹7,500 for AI search audits and ₹45,000/mo for full growth retainers."
+    description: "View transparent digital marketing packages at GROOWiq. Options range from social media content plans to complete growth retainers and dedicated marketing departments."
   },
   {
     path: "/contact",
@@ -62,12 +62,12 @@ const routes = [
     description: "Scale your audience with Groowiq's social media marketing agency in India. We design content strategies and community engines that acquire customers."
   },
   {
-    path: "/services/web-design-development",
+    path: "/services/web-development",
     title: "Web Design & Development Agency in India | Groowiq",
     description: "Get high-performance, fast web design and development services from Groowiq in India. Optimized for LCP, SEO, conversions, and mobile responsiveness."
   },
   {
-    path: "/services/branding-content",
+    path: "/services/branding",
     title: "Branding & Content Strategy Agency in India | Groowiq",
     description: "Establish your brand's authority with Groowiq's branding and content agency in India. High-impact brand kits, company profiles, and content pillars."
   },
@@ -92,6 +92,24 @@ const routes = [
     description: "Dominate search locally. Groowiq builds Google Business Profile optimizations, local business schema, and localized Google ads for SMBs."
   }
 ];
+
+// Add case study detail routes dynamically for pre-rendering
+const caseStudySlugs = [
+  "entartica-seaworld-full-funnel",
+  "spree-walk-instagram-growth",
+  "echt-marine-linkedin-authority",
+  "uvr-green-energies-web-linkedin",
+  "entartica-multi-city",
+  "client-cards"
+];
+
+caseStudySlugs.forEach((slug) => {
+  routes.push({
+    path: `/work/${slug}`,
+    title: `${slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())} | GROOWiq Case Study`,
+    description: `Read the verified B2B/D2C case study for ${slug.replace(/-/g, " ")}. Learn about our strategy, custom funnels, and real client results.`
+  });
+});
 
 async function prerender() {
   const toAbsolute = (p) => path.resolve(__dirname, p);
@@ -127,6 +145,11 @@ async function prerender() {
         html = html.replace("</head>", `  ${metaDescriptionTag}\n  </head>`);
       }
     }
+
+    // Inject dynamic canonical URL tag
+    const canonicalUrl = "https://www.groowiq.com" + (url === "/" ? "/" : url);
+    const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" />`;
+    html = html.replace("</head>", `  ${canonicalTag}\n  </head>`);
 
     // Inject structured JSON-LD schema
     if (route.schema) {

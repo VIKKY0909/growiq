@@ -72,7 +72,7 @@ const serviceData = {
       { q: "What social media channels should my business focus on?", a: "For B2B SaaS and corporate entities, LinkedIn is the primary acquisition channel. For D2C, e-commerce, and lifestyle services, Instagram and YouTube are the most profitable platforms. Groowiq helps structure custom multi-channel strategies." }
     ]
   },
-  "web-design-development": {
+  "web-development": {
     title: "Web Design & Development Agency in India | Groowiq",
     metaDesc: "Get high-performance, fast web design and development services from Groowiq in India. Optimized for LCP, SEO, conversions, and mobile responsiveness.",
     h1: "Web Design and Development that Converts Traffic into Customers",
@@ -94,7 +94,7 @@ const serviceData = {
       { q: "Do you build websites on WordPress or custom code?", a: "While we support platform integrations, we recommend and build using React and Vite with pre-rendering. This architecture guarantees the fastest load speeds and is highly secure against malware." }
     ]
   },
-  "branding-content": {
+  "branding": {
     title: "Branding & Content Strategy Agency in India | Groowiq",
     metaDesc: "Establish your brand's authority with Groowiq's branding and content agency in India. High-impact brand kits, company profiles, and content pillars.",
     h1: "Branding and Content that Establishes Unfair Authority in Your Market",

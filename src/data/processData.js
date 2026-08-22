@@ -1,84 +1,61 @@
 import {
-  Search,
-  Brain,
-  PenTool,
-  Rocket,
   TrendingUp,
+  Brain,
+  Sparkles,
+  Smartphone
 } from "lucide-react";
 
 export const processData = [
   {
     number: "01",
-    icon: Search,
-    label: "AUDIT & RESEARCH",
-    title: "Discover",
+    icon: Brain,
+    label: "PHASE 01",
+    title: "Strategy First",
     description:
-      "We analyze your business, audience, competitors and existing digital presence to uncover growth opportunities.",
-
+      "We analyze unit economics, search intent, and audience dynamics before writing copy or launching campaigns.",
     tags: [
-      "Business Audit",
-      "Competitor Research",
-      "Market Analysis",
-    ],
+      "Unit Economics",
+      "Intent Mapping",
+      "Market Auditing"
+    ]
   },
-
   {
     number: "02",
-    icon: Brain,
-    label: "GROWTH STRATEGY",
-    title: "Strategy",
+    icon: Smartphone,
+    label: "PHASE 02",
+    title: "Creator-Native",
     description:
-      "A complete roadmap covering branding, marketing, funnels and scalable customer acquisition.",
-
+      "We leverage creator-produced video assets, organic brand hooks, and native positioning to win trust.",
     tags: [
-      "Growth Roadmap",
-      "Funnel Planning",
-      "Marketing Strategy",
-    ],
+      "Reels Scripts",
+      "Creator Sourcing",
+      "Authentic Copy"
+    ]
   },
-
   {
     number: "03",
-    icon: PenTool,
-    label: "CREATIVE EXECUTION",
-    title: "Create",
+    icon: Sparkles,
+    title: "Built to Convert",
+    label: "PHASE 03",
     description:
-      "Designing high-converting creatives, websites, content and brand assets tailored for your audience.",
-
+      "We build light, lightning-fast custom React/Vite code bases and landing pages that load in under 2 seconds.",
     tags: [
-      "UI Design",
-      "Content",
-      "Brand Identity",
-    ],
+      "Fast Storefronts",
+      "Clean Checkouts",
+      "CRO Optimization"
+    ]
   },
-
   {
     number: "04",
-    icon: Rocket,
-    label: "CAMPAIGN LAUNCH",
-    title: "Launch",
-    description:
-      "Deploy campaigns across Meta, Google and organic channels with continuous monitoring.",
-
-    tags: [
-      "Meta Ads",
-      "Google Ads",
-      "SEO Launch",
-    ],
-  },
-
-  {
-    number: "05",
     icon: TrendingUp,
-    label: "OPTIMIZATION",
-    title: "Scale",
+    title: "Amplify What Works",
+    label: "PHASE 04",
     description:
-      "Measure, optimize and scale successful campaigns using real-time analytics and AI insights.",
-
+      "We double-down and scale high-performing ad creatives and citation paths while cutting non-performing budgets.",
     tags: [
-      "Analytics",
-      "Optimization",
-      "Scaling",
-    ],
-  },
+      "ROAS Scaling",
+      "Creative Auditing",
+      "Budget Allocation"
+    ]
+  }
 ];

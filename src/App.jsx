@@ -26,6 +26,31 @@ function ScrollToTop() {
   return null;
 }
 
+// URL Tracking & Query Parameter Cleanup helper
+function UrlCleanup() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.search) {
+      // Delay cleanup briefly to allow GA4/Meta Pixel tracking libraries to capture UTMs/referrers
+      const timer = setTimeout(() => {
+        try {
+          const cleanUrl =
+            window.location.origin +
+            window.location.pathname +
+            window.location.hash;
+          window.history.replaceState(null, "", cleanUrl);
+        } catch (e) {
+          console.error("Failed to clean up query parameters:", e);
+        }
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   const { darkMode } = useTheme();
   const [open, setOpen] = useState(false);
@@ -37,6 +62,7 @@ function App() {
       }`}
     >
       <ScrollToTop />
+      <UrlCleanup />
       
       <Navbar open={open} setOpen={setOpen} />
 
@@ -49,6 +75,7 @@ function App() {
           <Route path="/services/:serviceName" element={<ServicePage />} />
           <Route path="/industries/:industryName" element={<IndustriesPage />} />
           <Route path="/work" element={<WorkPage />} />
+          <Route path="/work/:slug" element={<WorkPage />} />
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="*" element={<HomePage open={open} setOpen={setOpen} />} />
         </Routes>
