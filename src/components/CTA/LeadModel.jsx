@@ -1,102 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
-import { useEffect , useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ServiceDropdown from "./ServiceDropdown";
 import { CheckCircle2 } from "lucide-react";
 
 
 const LeadModal = ({ open, onClose }) => {
   const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  service: "",
-  project: "",
- });
-
- const [errors, setErrors] = useState({});
- const [loading, setLoading] = useState(false);
- const [success, setSuccess] = useState(false)
-
-  const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || "";
-                           
-
-
-  const handleChange = (e) => {
-  const { name, value } = e.target;
-
-  setFormData((prev) => ({
-    ...prev,
-    [name]: value,
-  }));
-
-  setErrors((prev) => ({
-    ...prev,
-    [name]: "",
-  }));
- };
-
-
- const validate = () => {
-  let newErrors = {};
-
-  if (!formData.name.trim()) {
-    newErrors.name = "Name is required";
-  }
-
-  if (!formData.email.trim()) {
-    newErrors.email = "Email is required";
-  } else if (
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
-  ) {
-    newErrors.email = "Invalid email";
-  }
-
-  if (!formData.phone.trim()) {
-    newErrors.phone = "Phone is required";
-  } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-    newErrors.phone = "Phone must be 10 digits";
-  }
-
-  if (!formData.service) {
-    newErrors.service = "Please select a service";
-  }
-
-  if (!formData.project.trim()) {
-    newErrors.project = "Project details required";
-  } else if (formData.project.length < 20) {
-    newErrors.project = "Minimum 20 characters";
-  }
-
-  setErrors(newErrors);
-
-  return Object.keys(newErrors).length === 0;
-};
-
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (!validate()) return;
-
-  setLoading(true);
-
-try {
-  const response = await fetch(GOOGLE_SCRIPT_URL, {
-    method: "POST",
-    body: JSON.stringify(formData),
-  });
-
-  const result = await response.json();
-
-  if (!result.success) {
-    throw new Error(result.message);
-  }
-
-  setLoading(false);
-  setSuccess(true);
-
-  setFormData({
     name: "",
     email: "",
     phone: "",
@@ -104,13 +14,145 @@ try {
     project: "",
   });
 
-  setErrors({});
-} catch (error) {
-  console.error(error);
-  setLoading(false);
-  alert("Failed to submit the form. Please try again.");
-}
-};
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
+
+  useEffect(() => {
+    let widgetId = null;
+
+    if (open && window.turnstile && turnstileRef.current) {
+      turnstileRef.current.innerHTML = "";
+      
+      try {
+        widgetId = window.turnstile.render(turnstileRef.current, {
+          sitekey: import.meta.env.VITE_TURNSTILE_SITEKEY || "0x4AAAAAAAV48s17Z4G6K51s",
+          callback: (token) => {
+            setTurnstileToken(token);
+            setErrors((prev) => ({ ...prev, turnstile: "" }));
+          },
+          "expired-callback": () => {
+            setTurnstileToken("");
+          },
+          "error-callback": () => {
+            setTurnstileToken("");
+          }
+        });
+      } catch (err) {
+        console.error("Cloudflare Turnstile render error:", err);
+      }
+    }
+
+    return () => {
+      if (window.turnstile && widgetId) {
+        window.turnstile.remove(widgetId);
+      }
+    };
+  }, [open]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = "Invalid email";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone must be 10 digits";
+    }
+
+    if (!formData.service) {
+      newErrors.service = "Please select a service";
+    }
+
+    if (!formData.project.trim()) {
+      newErrors.project = "Project details required";
+    } else if (formData.project.length < 20) {
+      newErrors.project = "Minimum 20 characters";
+    }
+
+    if (!turnstileToken) {
+      newErrors.turnstile = "Please complete the Turnstile verification";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validate()) return;
+
+    setLoading(true);
+
+    const idempotencyKey = Math.random().toString(36).substring(2) + Date.now().toString(36);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken,
+          idempotencyKey
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Form submission failed");
+      }
+
+      setLoading(false);
+      setSuccess(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        project: "",
+      });
+      setTurnstileToken("");
+      setErrors({});
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+      alert(error.message || "Failed to submit the form. Please try again.");
+    }
+  };
 
   useEffect(() => {
     const handleEsc = (e) => {
@@ -316,6 +358,15 @@ const handleClose = () => {
                 </p>
               )}
            </>
+
+           <div className="my-2 flex flex-col items-center justify-center">
+             <div ref={turnstileRef}></div>
+             {errors.turnstile && (
+               <p className="text-red-500 text-sm mt-1 text-center">
+                 {errors.turnstile}
+               </p>
+             )}
+           </div>
 
              
              <button
