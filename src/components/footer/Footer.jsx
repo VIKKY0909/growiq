@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const {darkMode} = useTheme()
@@ -620,8 +621,8 @@ const Footer = () => {
               sm:justify-end
             "
           >
-            <a
-              href="#"
+            <Link
+              to="/privacy-policy"
               className="
                 text-[10px]
                 font-semibold
@@ -639,10 +640,10 @@ const Footer = () => {
               "
             >
               Privacy Policy
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/terms-of-service"
               className="
                 text-[10px]
                 font-semibold
@@ -660,10 +661,10 @@ const Footer = () => {
               "
             >
               Terms of Service
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="
                 text-[10px]
                 font-semibold
@@ -681,7 +682,7 @@ const Footer = () => {
               "
             >
               Contact Support
-            </a>
+            </Link>
           </div>
         </div>
       </div>

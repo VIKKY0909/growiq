@@ -13,6 +13,10 @@ import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import IndustriesPage from "./pages/IndustriesPage";
 import GuidesPage from "./pages/GuidesPage";
+import WorkPage from "./pages/WorkPage";
+import LocationPage from "./pages/LocationPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
 
 // Scroll to top helper
 function ScrollToTop() {
@@ -73,6 +77,11 @@ function App() {
           <Route path="/contact" element={<ContactPage setOpen={setOpen} />} />
           <Route path="/services/:serviceName" element={<ServicePage />} />
           <Route path="/industries/:industryName" element={<IndustriesPage />} />
+          <Route path="/locations/:locationName" element={<LocationPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/work/:slug" element={<WorkPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="*" element={<HomePage open={open} setOpen={setOpen} />} />
         </Routes>

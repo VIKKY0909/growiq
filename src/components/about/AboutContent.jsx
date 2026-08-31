@@ -69,11 +69,11 @@ const AboutContent = () => {
           md:text-5xl
         "
       >
-        We Don't Just Market.
+        Most agencies sell a menu.
         <br />
 
         <span className="bg-gradient-to-r from-[#D5D93B] via-[#d5d93b] to-[#B8C11F] bg-clip-text text-transparent inline-block">
-            We Build Digital Growth Engines.
+            We start with the bottleneck.
         </span>
 
       </motion.h2>
@@ -90,18 +90,14 @@ const AboutContent = () => {
           dark:text-gray-300
         "
       >
-        Groowiq is an AI-powered branding and growth studio helping
-        startups, founders and businesses build memorable brands
-        that convert.
+        You may need more traffic. You may also need a clearer offer, better creative, cleaner attribution, a faster website or a sales follow-up that stops leaking demand. Starting with every channel at once makes it harder to learn what is working.
       </motion.p>
 
       <motion.p
         variants={item}
-        className="mt-5  text-lg leading-8 text-[#0F1039]/70 dark:text-gray-300"
+        className="mt-5 text-lg leading-8 text-[#0F1039]/70 dark:text-gray-300"
       >
-        From branding and websites to performance marketing,
-        AI automation, SEO and content creation, we create
-        scalable growth systems designed for long-term success.
+        Groowiq begins with the business target, current funnel and available evidence. We identify the constraint, agree on the metric that matters, and build the smallest credible plan to test it. If a channel is unlikely to help, we say so before it becomes a monthly line item.
       </motion.p>
 
       {/* Divider */}
@@ -111,27 +107,6 @@ const AboutContent = () => {
         className=" mt-10 h-[2px] w-full bg-gradient-to-r from-[#0f1039] via-[#0f1039]/40 to-transparent dark:from-[#D5D93B] dark:via-[#D5D93B]/40 dark:to-transparent "
 
       />
-    
-
-  <div className="mt-10 grid grid-cols-3 gap-6">
-  <AnimatedCounter
-    end={500}
-    suffix="+"
-    label="Campaigns"
-  />
-
-  <AnimatedCounter
-    end={98}
-    suffix="%"
-    label="Satisfaction"
-  />
-
-  <AnimatedCounter
-    end={24}
-    suffix="/7"
-    label="AI Support"
-  />
-  </div>
 
       {/* Cards */}
 

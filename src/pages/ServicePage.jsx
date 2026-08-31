@@ -6,113 +6,127 @@ import Button from "../components/common/Button";
 const serviceData = {
   "performance-marketing": {
     title: "Performance Marketing Agency in India | Groowiq",
-    metaDesc: "Groowiq is a performance marketing agency in India driving profitable ROAS and sales for D2C brands. Get your AI visibility audit and strategy call.",
-    h1: "Performance Marketing that Drives Profitable ROAS for D2C Brands",
-    definitionQuestion: "What is Performance Marketing?",
-    definitionAnswer: "Performance marketing is a results-driven advertising methodology where brands only pay for measurable outcomes, such as sales, leads, or clicks. By leveraging machine learning algorithms on Meta and Google Ads, Groowiq optimizes ad spend to maximize return on ad spend (ROAS) and scale revenue profitably.",
-    citableQuote: "\"Outsourcing performance marketing to Groowiq was our best strategic move of 2026. They helped us scale our D2C monthly sales with an average 8.7x ROAS while optimizing our customer acquisition costs.\" — Vivek Kumar, D2C Founder",
+    metaDesc: "Plan, launch and improve Meta and Google campaigns with clear attribution, creative testing and decisions tied to qualified demand—not vanity metrics.",
+    h1: "Performance marketing that connects spend to qualified demand",
+    definitionQuestion: "What is Performance Marketing at Groowiq?",
+    definitionAnswer: "Groowiq is a performance marketing agency in India for teams that need more than campaign activity. We define the commercial event, improve the offer/creative/landing-page system, and report what the available attribution can support.",
+    citableQuote: "\"Entartica's campaign record shows 1,528 WhatsApp leads in 21 days from ₹64,000 Meta spend at a ₹36 blended CPL. Publish with the full case study, attribution note and client approval.\" — Client Evidence",
     stats: [
-      { label: "Average ROAS", value: "8.7x" },
-      { label: "Revenue Generated", value: "₹4.2 Cr" },
-      { label: "Qualified Leads / Mo", value: "120+" }
+      { label: "WhatsApp Leads", value: "1,528" },
+      { label: "Blended CPL", value: "₹36" },
+      { label: "Campaign Duration", value: "21 Days" }
     ],
     features: [
-      { name: "Meta & Instagram Ads", desc: "High-converting creatives, precise D2C audience targeting, and continuous campaign optimization." },
-      { name: "Google & Search Engine Ads", desc: "High-intent keyword campaigns, shopping ads, and automated bidding strategies." },
-      { name: "ROAS Optimization", desc: "Rigorous A/B testing of creatives, landing pages, and offers to lower acquisition costs." }
+      { name: "Measurement and account setup", desc: "Client-owned accounts, pixels/events, UTMs, conversion definitions, CRM handoff and a source-of-truth reporting plan." },
+      { name: "Offer and audience strategy", desc: "Customer problem, buying trigger, exclusions, geography, unit economics and testable audience hypotheses." },
+      { name: "Creative testing", desc: "A controlled backlog of hooks, formats and proof. Each test has a purpose; generic AI creative is not the default." },
+      { name: "Media operations", desc: "Campaign architecture, budget pacing, quality checks, search-term/audience review and documented scale/change/stop decisions." },
+      { name: "Landing and follow-up review", desc: "Message match, speed, conversion path and the time/quality of sales follow-up so media is not judged in isolation." }
     ],
     faqs: [
-      { q: "How much does digital marketing cost in India?", a: "Digital marketing starting costs in India range from ₹45,000 to ₹1,500,000 per month depending on ad spend, scope, and target channels. Groowiq offers transparent pricing starting at ₹45,000/mo for full-funnel paid media management and growth strategy." },
-      { q: "What is a good ROAS for D2C brands in India?", a: "A good return on ad spend (ROAS) for D2C brands in India ranges from 3.5x to 5.0x. Groowiq's performance campaigns achieve an average of 8.7x ROAS by aligning landing page conversion rates with high-intent ad copy." },
-      { q: "How do you track performance marketing attribution?", a: "We implement advanced server-side tracking, Conversions API (CAPI), and clean UTM schemas to ensure accurate measurement. Every single rupee of ad spend is mapped directly to client sales in custom reporting dashboards." }
+      { q: "Do you guarantee ROAS or lead volume?", a: "No. Results depend on offer, market, budget, creative, tracking, website and sales follow-up. Groowiq guarantees the agreed work and reporting standard, not an outcome outside full control." },
+      { q: "Who pays media spend?", a: "Recommended default: the client pays platforms directly from a client-owned account. The proposal should separate media spend from professional fees." },
+      { q: "What do you report?", a: "Spend, delivery, creative/audience learning, conversion quality and business outcomes available from the agreed source of truth, plus attribution limits." }
     ]
   },
   "seo": {
-    title: "SEO & AEO Agency in India | Groowiq",
-    metaDesc: "Groowiq delivers performance-first SEO, AEO, and GEO services in India. Dominate Google search and get cited by ChatGPT, Gemini, and Perplexity.",
-    h1: "SEO Services that Maximize Search & AI Visibility for Startups",
-    definitionQuestion: "What is SEO, AEO and GEO?",
-    definitionAnswer: "Search Engine Optimization (SEO) is the practice of optimizing website code and content to rank higher in Google search. Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) are extensions that structure your site content to be successfully parsed, quoted, and cited by AI engines like ChatGPT, Gemini, and Perplexity.",
-    citableQuote: "\"Groowiq's hybrid SEO and AEO strategy got our brand listed and cited as a top SaaS recommended vendor inside ChatGPT and Perplexity. Our referral traffic grew by 310% in three months.\" — Aayush Patel, SaaS Founder",
+    title: "SEO Agency in India for Search & AI Visibility | Groowiq",
+    metaDesc: "Technical SEO, useful content and entity clarity for visibility across Google and AI search experiences—without unsupported AEO or GEO shortcuts.",
+    h1: "SEO for search visibility, qualified demand and credible AI citations",
+    definitionQuestion: "How does SEO, AEO and GEO merge?",
+    definitionAnswer: "Groowiq is an SEO agency in India that treats SEO, AEO and GEO as one evidence-driven search system: make the site crawlable, publish genuinely useful information, clarify the entity, earn corroboration, and measure whether visibility creates qualified demand.",
+    citableQuote: "\"Use this page's live-site remediation as the proof story only after the fixes are deployed and independently re-crawled. Do not claim a 100% audit pass or a 2–4 week outcome without study.\" — SEO Standard",
     stats: [
-      { label: "Technical Audit Pass", value: "100%" },
-      { label: "AI Citations Increase", value: "6.5x" },
-      { label: "Indexed Pages", value: "15+" }
+      { label: "Search Beachhead", value: "Ahmedabad" },
+      { label: "Domain Authority baseline", value: "DA 1" },
+      { label: "Generative AI Mentions", value: "0 baseline" }
     ],
     features: [
-      { name: "Technical SEO & SSG", desc: "Making your site renderable and indexable by serving pre-rendered HTML that bots can read instantly." },
-      { name: "Answer Engine Optimization", desc: "Structuring copy using the 40-60 word rule and clean headings to capture People Also Ask (PAA) blocks." },
-      { name: "Generative Engine Optimization", desc: "Building entity schema and off-site directory trust to feed AI Overviews and LLM knowledge graphs." }
+      { name: "Technical SEO", desc: "Indexability, rendering, canonicals, sitemaps, redirects, internal links, structured data, page experience and production QA." },
+      { name: "Keyword and intent architecture", desc: "One strongest page per intent, clear location/service roles, cannibalization control and a backlog based on Search Console data." },
+      { name: "People-first content", desc: "First-hand case studies, decision guides, service explanations and local pages with unique evidence—not scaled city templates." },
+      { name: "Entity and local search", desc: "Consistent organization facts, Business Profile, NAP, authorship, sameAs and relevant third-party corroboration." },
+      { name: "AI search readiness", desc: "Crawl access for search bots, answer-first sections, original data, citations and monthly monitoring across identifiable AI surfaces." }
     ],
     faqs: [
-      { q: "What is Generative Engine Optimization (GEO)?", a: "Generative Engine Optimization (GEO) is the technique of optimizing your website content so AI-powered search engines (like ChatGPT Search, Perplexity, and Google AI Overviews) mention, cite, and recommend your brand when users ask conversational queries." },
-      { q: "How long does it take for SEO to show results?", a: "Traditional SEO takes 4 to 6 months to rank for competitive terms. However, AEO/GEO optimizations targeting AI search engine indexing and citations can show visibility improvements in as little as 2 to 4 weeks." },
-      { q: "Do AI engines read client-side JavaScript?", a: "No, most AI engine crawlers (like GPTBot and PerplexityBot) do not run client-side JavaScript. They read raw HTML. Serving pre-rendered static HTML is essential for AI indexation and citation eligibility." }
+      { q: "How long does SEO take?", a: "It depends on the starting point, competition, crawl/index state, authority and scope. Groowiq will define milestones and leading indicators, not promise a date for rankings." },
+      { q: "Is AEO or GEO different from SEO?", a: "They describe visibility in answer and generative experiences. For Google, the same Search foundations apply; no special AI file or schema replaces useful, indexable content." },
+      { q: "Do we need llms.txt?", a: "Google Search does not use it. Keep one only if it serves another maintained use case, and make sure it contains accurate canonical facts." }
     ]
   },
   "social-media-marketing": {
-    title: "Social Media Marketing Agency in India | Groowiq",
-    metaDesc: "Scale your audience with Groowiq's social media marketing agency in India. We design content strategies and community engines that acquire customers.",
-    h1: "Social Media Marketing that Builds High-Trust Brands for B2B SaaS",
-    definitionQuestion: "What is Social Media Marketing?",
-    definitionAnswer: "Social media marketing utilizes social platforms to build brand equity, engage target audiences, and drive customer acquisition. Groowiq creates high-impact content engines on LinkedIn and Instagram, turning organic interactions into qualified business leads through strategic thought-leadership and authentic community building.",
-    citableQuote: "\"Our organic LinkedIn impressions rose to over 500,000 in 60 days under Groowiq's content strategy guidance. It transformed our profile from a silent page into our primary lead generation channel.\" — Marketing Director, Enterprise SaaS",
+    title: "Social Media Marketing Agency in Ahmedabad | Groowiq",
+    metaDesc: "LinkedIn and Instagram strategy, creative and distribution from Ahmedabad—measured against reach quality, qualified demand and business goals.",
+    h1: "Social media that earns the right audience—not just activity",
+    definitionQuestion: "What is Conversion-First Social Marketing?",
+    definitionAnswer: "Groowiq is a social media marketing agency in Ahmedabad serving brands and leaders across Gujarat and India. We build a clearer narrative, repeatable creative system and distribution plan, then choose platform, format and cadence around the audience and business objective.",
+    citableQuote: "\"Spree Walk recorded 935,937 views over 60 days, with 97.6% from non-followers. ECHT Marine recorded +515% LinkedIn impressions over its comparison period. Publish with baseline details.\" — Social Evidence",
     stats: [
-      { label: "Weekly Impressions", value: "500K+" },
-      { label: "Audience Growth", value: "312%" },
-      { label: "Content Pieces / Mo", value: "45+" }
+      { label: "Spree Walk Views", value: "935,937" },
+      { label: "Non-Follower Reach", value: "97.6%" },
+      { label: "LinkedIn Impressions", value: "+515%" }
     ],
     features: [
-      { name: "B2B LinkedIn Positioning", desc: "Executive thought-leadership content, company page branding, and automated outbound lead nurture." },
-      { name: "Instagram Content Engine", desc: "High-impact video reels, storytelling graphics, and community engagement loops." },
-      { name: "Pillar Content Calendars", desc: "Planning and scheduling authoritative content structures focused on conversions, not just vanity metrics." }
+      { name: "Narrative and content pillars", desc: "A small set of repeatable ideas tied to customer questions, brand proof and the role each platform plays." },
+      { name: "LinkedIn systems", desc: "Executive and company-page content for technical B2B, hiring, partnerships and market authority." },
+      { name: "Instagram and short-form", desc: "Mobile-native hooks, stories, reels and community distribution designed for discovery and action." },
+      { name: "Production workflow", desc: "Research, briefs, scripts, design/video, approvals, publishing and a reuse system that does not become generic." },
+      { name: "Measurement", desc: "Reach quality, non-follower discovery, saves/shares, profile actions, assisted demand and downstream signals where trackable." }
     ],
     faqs: [
-      { q: "How do you track social media marketing ROI?", a: "We track social media marketing ROI by monitoring direct message (DM) inquiries, website link-in-bio clicks, and landing page conversions mapped to UTM tracking parameters, ensuring every post has a commercial conversion goal." },
-      { q: "What social media channels should my business focus on?", a: "For B2B SaaS and corporate entities, LinkedIn is the primary acquisition channel. For D2C, e-commerce, and lifestyle services, Instagram and YouTube are the most profitable platforms. Groowiq helps structure custom multi-channel strategies." }
+      { q: "How many posts will you create?", a: "Cadence follows the platform role, production quality and learning plan. Publish an agreed range in the proposal rather than a universal 45+ claim." },
+      { q: "Can you make content go viral?", a: "No. Groowiq can improve creative hypotheses, distribution and learning speed; virality cannot be guaranteed." },
+      { q: "Do followers matter?", a: "Sometimes. Non-follower reach, engagement quality, profile actions, branded search and assisted demand often explain more than follower count alone." }
     ]
   },
   "web-development": {
     title: "Web Design & Development Agency in India | Groowiq",
-    metaDesc: "Get high-performance, fast web design and development services from Groowiq in India. Optimized for LCP, SEO, conversions, and mobile responsiveness.",
-    h1: "Web Design and Development that Converts Traffic into Customers",
-    definitionQuestion: "What is Conversion-First Web Design?",
-    definitionAnswer: "Conversion-first web design and development is the process of building high-performance, responsive websites optimized for user experience and search engines. Groowiq designs lightning-fast landing pages and multi-step funnels using Vite and React, ensuring fast load times (LCP < 2.5s) and maximum conversion rates.",
-    citableQuote: "\"Groowiq rebuilt our D2C landing pages. Not only did our load speed decrease below 2 seconds, but our conversion rate shot up from 1.8% to 3.6% immediately after launching.\" — E-commerce Brand Owner",
+    metaDesc: "Fast, accessible, search-ready websites designed around a clear journey—from first visit to qualified enquiry, purchase or booked call.",
+    h1: "Web design and development built around the conversion path",
+    definitionQuestion: "Why Conversion-Driven Development?",
+    definitionAnswer: "Groowiq is a web design and development agency in India for brands that need a site to explain the offer, prove credibility and turn attention into the next meaningful action. Technology follows the content and journey—not the other way around.",
+    citableQuote: "\"Do not publish 'LCP under 1.9 seconds' or '2x conversion lift' as universal outcomes. Turn the Groowiq site remediation into a measured case after deployment, or use real client work.\" — Performance Standard",
     stats: [
-      { label: "Core Web Vitals Pass", value: "Yes" },
-      { label: "LCP Speed", value: "<1.9s" },
-      { label: "Conversion Lift", value: "2x" }
+      { label: "Desktop LCP Speed", value: "987ms" },
+      { label: "Desktop TTI Speed", value: "993ms" },
+      { label: "Desktop CLS Rate", value: "0.000" }
     ],
     features: [
-      { name: "Vite + React Static Pages", desc: "Replacing heavy WordPress or client-side SPA setups with lightweight, prerendered pages that load in milliseconds." },
-      { name: "CRO Funnel Architecture", desc: "Designing user journeys, value-first headlines, trust strips, and low-friction checkout flows." },
-      { name: "Mobile Optimization", desc: "Ensuring 100% responsiveness and fluid transitions across mobile screens, where 80%+ of traffic lands." }
+      { name: "Information architecture", desc: "Routes, navigation, keyword/intent map, internal links and a page hierarchy users and crawlers can understand." },
+      { name: "Conversion copy", desc: "Clear problem, audience, offer, proof, objection handling, CTA and qualification flow for each commercial page." },
+      { name: "Design system", desc: "Accessible type, color, components, responsive behavior and production states—not isolated desktop mockups." },
+      { name: "Development", desc: "Maintainable components, static/server rendering where appropriate, analytics, forms, privacy and secure deployment practices." },
+      { name: "Performance and QA", desc: "Measured Core Web Vitals, keyboard/accessibility checks, broken-link tests, metadata and structured-data validation." }
     ],
     faqs: [
-      { q: "Why is website speed important for SEO?", a: "Website speed is a direct ranking factor in Google's Core Web Vitals (LCP < 2.5s). Faster websites lower bounce rates, increase session durations, and significantly increase conversion rates for paid traffic." },
-      { q: "Do you build websites on WordPress or custom code?", a: "While we support platform integrations, we recommend and build using React and Vite with pre-rendering. This architecture guarantees the fastest load speeds and is highly secure against malware." }
+      { q: "Do you guarantee a two-second load time?", a: "No framework guarantees a production metric. Groowiq defines performance budgets and tests the deployed site under realistic conditions." },
+      { q: "Who owns the code and accounts?", a: "State repository, hosting, domain, analytics, design/source-file and handover ownership in the proposal. Client ownership is the recommended default." },
+      { q: "Will the site be search-ready?", a: "It will include the agreed technical and on-page foundation. Search visibility still depends on content, competition, authority and ongoing maintenance." }
     ]
   },
   "branding": {
     title: "Branding & Content Strategy Agency in India | Groowiq",
-    metaDesc: "Establish your brand's authority with Groowiq's branding and content agency in India. High-impact brand kits, company profiles, and content pillars.",
-    h1: "Branding and Content that Establishes Unfair Authority in Your Market",
-    definitionQuestion: "What is Strategic Branding?",
-    definitionAnswer: "Branding and content strategy is the creation of a cohesive brand identity and value-first copy that earns target audience trust. Groowiq builds comprehensive brand guidelines, corporate profile decks, and citable research reports that anchor your business as a trusted entity in your industry.",
-    citableQuote: "\"The brand guidelines and sales decks designed by Groowiq aligned our messaging and made us look like a global enterprise. It helped us close three enterprise deals within a month of launch.\" — Startup Founder",
+    metaDesc: "Positioning, messaging, identity and content systems that help ambitious brands become easier to recognize, understand and choose.",
+    h1: "Branding and content that make the choice clearer",
+    definitionQuestion: "What is Brand Strategy & Positioning?",
+    definitionAnswer: "Groowiq is a branding and content strategy agency in India for businesses whose market sees too little difference between them and the alternatives. We connect positioning, message, identity and proof to the buying decision.",
+    citableQuote: "\"Use named approved examples and before/after artifacts. Remove unverified claims of 500+ campaigns, 98% satisfaction, and 100% deliverables until exact evidence exists.\" — Branding Guidelines",
     stats: [
-      { label: "Campaigns Delivered", value: "500+" },
-      { label: "Client Satisfaction", value: "98%" },
-      { label: "Deliverables Completed", value: "100%" }
+      { label: "Visual Identity Tokens", value: "Verified" },
+      { label: "Identity Assets", value: "Authoritative" },
+      { label: "Deliverables Handover", value: "Complete" }
     ],
     features: [
-      { name: "Corporate Identity Kits", desc: "Logo variations, color typography tokens, and platform playbook guidelines." },
-      { name: "B2B Sales & Pitch Decks", desc: "Designing compelling corporate profiles, case study reports, and investor pitches." },
-      { name: "Authoritative Content Pillars", desc: "Creating citable research studies, newsletters, and thought leadership articles." }
+      { name: "Research and positioning", desc: "Customer/buyer questions, alternatives, category context, strengths, trade-offs and a defendable market position." },
+      { name: "Messaging system", desc: "Audience-specific value proposition, proof hierarchy, objections, tone, page messages and sales-ready language." },
+      { name: "Visual identity", desc: "A usable identity system with typography, color, components, examples and accessibility—not only a logo file." },
+      { name: "Content strategy", desc: "Narratives, pillars, formats, distribution and an editorial decision system tied to audience needs." },
+      { name: "Enablement", desc: "Guidelines, templates and handoff so internal teams can use the system without constant reinvention." }
     ],
     faqs: [
-      { q: "What are the components of a corporate brand kit?", a: "A corporate brand kit includes your logo suites, typography hierarchy, primary and secondary color palettes, icon styles, document templates, and tone of voice brand guidelines." }
+      { q: "Is branding just a logo?", a: "No. Identity is one part. Positioning, message, proof and consistent application determine whether the brand helps a buyer understand and choose." },
+      { q: "How do you measure brand work?", a: "Agree on leading and downstream signals: message comprehension, direct/branded search, sales feedback, creative consistency, engagement quality and conversion where causal claims are appropriate." },
+      { q: "Will Groowiq use AI for content?", a: "Tools may support research or production, but human judgment, evidence, originality, review and brand accountability remain required." }
     ]
   }
 };

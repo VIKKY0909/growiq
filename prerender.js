@@ -8,8 +8,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const routes = [
   {
     path: "/",
-    title: "Performance-First Digital Marketing Agency in India | Groowiq",
-    description: "Groowiq is a performance-first digital marketing agency in India. We design AI-optimized branding, SEO, search visibility, paid ads, and growth funnels.",
+    title: "Growth Marketing Agency in India | Groowiq",
+    description: "Groowiq is an Ahmedabad growth marketing agency for paid media, SEO, social, branding and conversion-led websites—measured against qualified demand.",
     schema: {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -23,48 +23,93 @@ const routes = [
   },
   {
     path: "/about",
-    title: "About Groowiq | Performance & Growth Marketing Agency",
-    description: "Learn about Groowiq, a performance-first digital marketing agency in India. We design AI-optimized branding, SEO, search visibility, paid ads, and growth funnels."
+    title: "About Groowiq | Growth Marketing Agency in Ahmedabad",
+    description: "Meet Groowiq, an Ahmedabad-based growth marketing agency serving Gujarat and India with focused strategy, transparent execution and verified proof."
   },
   {
     path: "/pricing",
-    title: "Digital Marketing Pricing & Packages in India | Groowiq",
-    description: "View transparent digital marketing packages at GROOWiq. Options range from social media content plans to complete growth retainers and dedicated marketing departments."
+    title: "Digital Marketing Pricing in India | How Groowiq Scopes",
+    description: "See how Groowiq prices growth marketing work, what changes scope, what you own, and what to prepare for an accurate proposal."
   },
   {
     path: "/contact",
-    title: "Contact Groowiq | Book Your Free Digital Strategy Call",
-    description: "Book a free strategy consultation call with Groowiq. Speak with India's performance marketing, brand funnel, and SEO/AEO growth specialists."
+    title: "Contact Groowiq | Discuss Your Growth Bottleneck",
+    description: "Tell Groowiq what is not moving, what you have tried and how success will be measured. Get a focused next-step recommendation—not a generic package pitch."
   },
   {
     path: "/guides",
-    title: "Marketing Guides & Resources | Groowiq Education Hub",
-    description: "Browse marketing tutorials and guides from Groowiq. Get answers on digital agency costs in India, evaluative checklists, and D2C scaling funnels."
+    title: "Marketing Guides for Better Agency Decisions | Groowiq",
+    description: "Practical guides on agency selection, paid media, SEO, social, attribution and marketing costs—built from real delivery decisions."
+  },
+  {
+    path: "/locations/gujarat",
+    title: "Digital Marketing Agency in Gujarat | Groowiq",
+    description: "Groowiq is an Ahmedabad-based digital marketing agency for Gujarat businesses—paid media, SEO, social, branding and web with accountable reporting."
+  },
+  {
+    path: "/locations/ahmedabad",
+    title: "Digital Marketing Agency in Ahmedabad | Groowiq",
+    description: "An Ahmedabad digital marketing agency for paid media, SEO, social, branding and conversion websites—scoped around your growth bottleneck."
   },
   {
     path: "/services/performance-marketing",
     title: "Performance Marketing Agency in India | Groowiq",
-    description: "Groowiq is a performance marketing agency in India driving profitable ROAS and sales for D2C brands. Get your AI visibility audit and strategy call."
+    description: "Plan, launch and improve Meta and Google campaigns with clear attribution, creative testing and decisions tied to qualified demand—not vanity metrics."
   },
   {
     path: "/services/seo",
-    title: "SEO & AEO Agency in India | Groowiq",
-    description: "Groowiq delivers performance-first SEO, AEO, and GEO services in India. Dominate Google search and get cited by ChatGPT, Gemini, and Perplexity."
+    title: "SEO Agency in India for Search & AI Visibility | Groowiq",
+    description: "Technical SEO, useful content and entity clarity for visibility across Google and AI search experiences—without unsupported AEO or GEO shortcuts."
   },
   {
     path: "/services/social-media-marketing",
-    title: "Social Media Marketing Agency in India | Groowiq",
-    description: "Scale your audience with Groowiq's social media marketing agency in India. We design content strategies and community engines that acquire customers."
+    title: "Social Media Marketing Agency in Ahmedabad | Groowiq",
+    description: "LinkedIn and Instagram strategy, creative and distribution from Ahmedabad—measured against reach quality, qualified demand and business goals."
   },
   {
     path: "/services/web-development",
     title: "Web Design & Development Agency in India | Groowiq",
-    description: "Get high-performance, fast web design and development services from Groowiq in India. Optimized for LCP, SEO, conversions, and mobile responsiveness."
+    description: "Fast, accessible, search-ready websites designed around a clear journey—from first visit to qualified enquiry, purchase or booked call."
   },
   {
     path: "/services/branding",
     title: "Branding & Content Strategy Agency in India | Groowiq",
-    description: "Establish your brand's authority with Groowiq's branding and content agency in India. High-impact brand kits, company profiles, and content pillars."
+    description: "Positioning, messaging, identity and content systems that help ambitious brands become easier to recognize, understand and choose."
+  },
+  {
+    path: "/work",
+    title: "Groowiq Marketing Case Studies | Verified Growth Work",
+    description: "See Groowiq case studies with stated baselines, time periods, methods and measurement notes across paid media, social, LinkedIn and brand launches."
+  },
+  {
+    path: "/work/entartica-growth",
+    title: "Entartica: 1,528 WhatsApp Leads in 21 Days | Groowiq",
+    description: "In a 21-day Meta campaign, Entartica's record shows 1,528 WhatsApp leads from ₹64,000 spend at a ₹36 blended cost per lead."
+  },
+  {
+    path: "/work/spree-walk-social-growth",
+    title: "Spree Walk: Reaching Beyond Follower Base | Groowiq",
+    description: "Spree Walk case study: 935,937 views in 60 days with 97.6% coming from non-followers. Read the content distribution strategy."
+  },
+  {
+    path: "/work/echt-marine-linkedin",
+    title: "ECHT Marine: Building B2B LinkedIn Visibility | Groowiq",
+    description: "ECHT Marine case study: +515% increase in B2B LinkedIn impressions over 70 days. Read how we scaled B2B authority."
+  },
+  {
+    path: "/work/uvr-digital-launch",
+    title: "UVR: Launching Digital Visibility from Zero Baseline | Groowiq",
+    description: "UVR case study: +14,338% impressions and +1,012% unique visitors in month one from a standing zero baseline."
+  },
+  {
+    path: "/privacy-policy",
+    title: "Privacy Policy | Groowiq",
+    description: "Read the privacy policy of Groowiq. Learn how we handle your enquiry data."
+  },
+  {
+    path: "/terms-of-service",
+    title: "Terms of Service | Groowiq",
+    description: "Read the terms of service of Groowiq for digital marketing engagements."
   },
   {
     path: "/industries/ecommerce-d2c",

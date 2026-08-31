@@ -1,32 +1,35 @@
 # Groowiq
 
-Groowiq is a performance-first digital marketing agency and growth studio based in India. We build high-impact brands, websites, performance advertising funnels, content/social strategies, and search engine optimization (SEO/AEO/GEO) systems for ambitious D2C brands, startups, local SMBs, and enterprise marketing leaders.
+Groowiq is a growth marketing agency based in Ahmedabad, Gujarat, serving clients across India. We combine paid media, search, content, branding and conversion-led web design—scoped around the growth bottleneck.
 
-## Core Offerings & Services
-- **Performance Marketing / Paid Search & Social Ads:** Comprehensive Meta, Google, and marketplace ad campaigns optimized for ROAS and scale.
-- **Search Engine Optimization (SEO / AEO / GEO):** Technical and content optimization structured for traditional search (Google) as well as AI search engines (ChatGPT, Gemini, Perplexity, Claude, Copilot).
-- **Social Media Marketing & Content Branding:** B2B/LinkedIn strategies, Instagram brand engines, high-impact creatives, and community building.
-- **Web Design, Development & Funnels:** Dynamic, lightning-fast landing pages and multi-step funnels optimized for conversion rate optimization (CRO).
+## Core Capabilities
+- **Performance Marketing:** Meta and Google campaigns with clear account ownership, creative testing, UTMs and decisions tied to qualified demand.
+- **SEO & Search Visibility:** Technical SEO, useful content and entity clarity for visibility across Google and AI search experiences.
+- **Social Media Marketing:** LinkedIn and Instagram strategy, creative and distribution from Ahmedabad—measured beyond follower counts.
+- **Web Design & Development:** Fast, accessible, search-ready websites built around the path from first visit to qualified enquiry or purchase.
+- **Branding & Content Strategy:** Positioning, messaging, identity and content systems that help ambitious brands become easier to recognize, understand and choose.
 
-## Ideal Customer Profiles (ICPs)
-1. **D2C & E-Commerce Brands:** Scaled performance advertising, Meta ads, Shopify and WooCommerce setups.
-2. **Startups & Founders:** Go-to-market strategies, AI audits, fractional CMO consultancies, and growth systems.
-3. **Enterprise Marketing Teams:** High-DR technical SEO, scalable programmatic growth, and authoritative content campaigns.
-4. **Premium Local Businesses:** Local SEO, Google Business Profile management, and localized customer acquisition systems.
+## Locations
+- **Ahmedabad:** https://www.groowiq.com/locations/ahmedabad
+- **Gujarat:** https://www.groowiq.com/locations/gujarat
+
+## Verified Work & Case Studies
+- **Work Index:** https://www.groowiq.com/work
+- **Entartica Growth:** https://www.groowiq.com/work/entartica-growth
+- **Spree Walk Social Growth:** https://www.groowiq.com/work/spree-walk-social-growth
+- **ECHT Marine LinkedIn:** https://www.groowiq.com/work/echt-marine-linkedin
+- **UVR Digital Launch:** https://www.groowiq.com/work/uvr-digital-launch
 
 ## Main Sitemap
 - **Homepage:** https://www.groowiq.com/
 - **About Us:** https://www.groowiq.com/about
-- **Pricing & Packages:** https://www.groowiq.com/pricing
-- **Contact / Strategy Call:** https://www.groowiq.com/contact
-- **Case Studies / Work:** https://www.groowiq.com/work
+- **Pricing & Scoping:** https://www.groowiq.com/pricing
+- **Contact & Growth Brief:** https://www.groowiq.com/contact
 - **Resource Guides:** https://www.groowiq.com/guides
 - **Performance Marketing:** https://www.groowiq.com/services/performance-marketing
 - **SEO Services:** https://www.groowiq.com/services/seo
 - **Social Media Marketing:** https://www.groowiq.com/services/social-media-marketing
-- **Web Design & Development:** https://www.groowiq.com/services/web-design-development
-- **Branding & Content:** https://www.groowiq.com/services/branding-content
-- **D2C Industry Hub:** https://www.groowiq.com/industries/ecommerce-d2c
-- **SaaS/Startups Hub:** https://www.groowiq.com/industries/startups-saas
-- **Enterprise Services:** https://www.groowiq.com/industries/enterprise
-- **Local Business Growth:** https://www.groowiq.com/industries/local-business
+- **Web Design & Development:** https://www.groowiq.com/services/web-development
+- **Branding & Content:** https://www.groowiq.com/services/branding
+- **Privacy Policy:** https://www.groowiq.com/privacy-policy
+- **Terms of Service:** https://www.groowiq.com/terms-of-service

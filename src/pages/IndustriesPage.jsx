@@ -6,83 +6,84 @@ import Button from "../components/common/Button";
 const industryData = {
   "ecommerce-d2c": {
     title: "D2C E-Commerce Growth Marketing Agency | Groowiq",
-    metaDesc: "Scale your e-commerce revenue profitably. Groowiq is a D2C growth marketing agency in India delivering Meta ads, SEO, and custom Shopify conversion funnels.",
-    h1: "Performance Marketing and Funnel Scaling for D2C Brands",
-    definitionQuestion: "What is D2C Growth Marketing?",
-    definitionAnswer: "Direct-to-consumer (D2C) growth marketing focuses on acquiring and retaining customers online through optimized acquisition funnels and paid ad strategies. By aligning Meta creative testing with post-click conversion rate optimization (CRO) on Shopify storefronts, Groowiq scales sales profitably while lowering customer acquisition costs (CAC).",
+    metaDesc: "Scale your e-commerce revenue profitably. Groowiq connects creative testing, paid distribution, and landing experiences around contribution margins.",
+    h1: "D2C growth marketing built around contribution—not platform ROAS alone",
+    definitionQuestion: "What is D2C Growth Marketing at Groowiq?",
+    definitionAnswer: "Groowiq helps D2C and e-commerce teams connect creative, paid distribution, landing experience and measurement. The plan begins with unit economics, inventory, offer, repeat purchase and operational capacity, because an attractive platform return can still hide an unprofitable customer.",
     stats: [
-      { label: "D2C Brand ROAS", value: "8.7x" },
-      { label: "Sales Scaled", value: "₹4.2 Cr" },
-      { label: "D2C Clients Scaled", value: "30+" }
+      { label: "Focus Metric", value: "Contribution Margin" },
+      { label: "Channel Focus", value: "Creative Testing" },
+      { label: "Infrastructure", value: "Client-Owned" }
     ],
     features: [
-      { name: "Full-Funnel Paid Advertising", desc: "Meta, Google, and marketplace media buying targeting profitable acquisition and maximum retention." },
-      { name: "Shopify Storefront CRO", desc: "Redesigning checkout pages, landing pages, and product pages to lift browser-to-buyer conversions." },
-      { name: "Subscription & Retention Models", desc: "Email flows, SMS notifications, and loyalty systems to improve customer lifetime value (LTV)." }
+      { name: "Unit Economics & Funnel Review", desc: "We examine contribution margin, blended acquisition cost, repeat purchase window and reconciliation with actual orders." },
+      { name: "Creative Testing & Operations", desc: "Structured video and image hook tests with disciplined media operations and stop/scale rules." },
+      { name: "Landing & Merchandising Path", desc: "High-speed conversion landing pages and product offer messaging designed to lift average order value." }
     ],
     faqs: [
-      { q: "What is the average customer acquisition cost (CAC) in Indian D2C?", a: "Average customer acquisition cost (CAC) in Indian D2C varies by category, ranging from ₹300 to ₹1,200. Groowiq helps brands optimize CAC by using citable authority content and optimized landing page funnels." },
-      { q: "How do you scale D2C ads without losing efficiency?", a: "We scale D2C ads by setting up high-frequency creative testing systems, building custom landing pages to increase average order value (AOV), and leveraging machine learning bidding frameworks." }
+      { q: "What do you examine before scaling D2C ad spend?", a: "We examine contribution margin, blended acquisition cost, new versus returning customers, creative fatigue, product/offer fit, landing-page conversion, and shipping/payment friction." },
+      { q: "Who owns the D2C ad accounts?", a: "All ad accounts, pixels, and analytics assets remain 100% owned by the client. Groowiq operates via delegated business manager access." }
     ]
   },
   "startups-saas": {
     title: "SaaS & Tech Startup Growth Marketing Agency | Groowiq",
     metaDesc: "Go-to-market strategies and client acquisition for tech startups. Groowiq builds AI visibility search systems and LinkedIn organic content funnels.",
-    h1: "Go-To-Market and AI Visibility Audits for SaaS & Tech Startups",
-    definitionQuestion: "How do Startups Build AI Search Visibility?",
-    definitionAnswer: "Startups build AI search visibility by optimizing their content architecture for AEO/GEO indexing (traditional site schema and pre-rendered HTML) and securing references in third-party trusts. This ensures the startup is cited, recommended, and shortlisted by AI buying assistants on ChatGPT, Gemini, and Perplexity.",
+    h1: "Go-to-market and demand generation for SaaS & tech startups",
+    definitionQuestion: "How do Startups Build Search & AI Visibility?",
+    definitionAnswer: "Startups build search visibility by clarifying their ICP, publishing useful original documentation, and establishing entity credibility across Google and AI search systems like ChatGPT and Perplexity.",
     stats: [
-      { label: "SaaS Leads Lift", value: "3.1x" },
-      { label: "AI Citations Lift", value: "6.5x" },
-      { label: "Warm Pipeline Scale", value: "₹1L+" }
+      { label: "GTM Approach", value: "ICP First" },
+      { label: "Primary Channels", value: "SEO & LinkedIn" },
+      { label: "Attribution", value: "Pipeline Tied" }
     ],
     features: [
-      { name: "GTM Funnel Design", desc: "Setting up product-led growth (PLG) setups, demos, free trial loops, and landing page funnels." },
-      { name: "LinkedIn Executive Positioning", desc: "Transforming founder and executive profiles into direct client-acquisition engines through organic content." },
-      { name: "AI Citation Optimization", desc: "In-depth auditing and strategy implementation to get your tech product recommended in AI search engines." }
+      { name: "ICP & Offer Positioning", desc: "Translating technical product capabilities into clear buyer value propositions that address complex buying committees." },
+      { name: "Executive & B2B LinkedIn Systems", desc: "Transforming founder and company profiles into authoritative lead-nurturing engines through organic thought leadership." },
+      { name: "Search & Answer Engine Optimization", desc: "Structuring crawlable, pre-rendered documentation and technical content to capture high-intent buyers." }
     ],
     faqs: [
-      { q: "How do SaaS buying assistants recommend products?", a: "AI buying assistants parse the web looking for authoritative product documentation, citable case studies, and third-party listings. We build pre-rendered content and place entity listings to make you the top recommendation." }
+      { q: "How do AI buying assistants recommend products?", a: "AI buying assistants parse the web looking for authoritative product documentation, citable case studies, and third-party listings. We build pre-rendered content and place entity listings to establish citation eligibility." }
     ]
   },
   "enterprise": {
     title: "Enterprise Digital Marketing Agency India | Groowiq",
-    metaDesc: "Scalable performance and programmatic search solutions for enterprise brands. High-DR technical SEO, sitemaps, and conversion architectures.",
-    h1: "Programmatic Search and Conversion Systems for Enterprises",
-    definitionQuestion: "What is Programmatic SEO for Enterprises?",
-    definitionAnswer: "Programmatic SEO is the systematic creation of high-quality, database-driven landing pages designed to capture thousands of transactional long-tail keywords. For enterprise brands, Groowiq deploys clean URL routing architectures, sitemap indexing schemas, and high-performance server-side rendering to drive massive organic scale.",
+    metaDesc: "Scalable performance and programmatic search solutions for enterprise brands. High-performance technical SEO, sitemaps, and conversion architectures.",
+    h1: "Programmatic search and conversion systems for enterprise brands",
+    definitionQuestion: "What is Enterprise Technical SEO?",
+    definitionAnswer: "Enterprise SEO is the systematic technical and architectural optimization of large-scale web properties, ensuring crawl efficiency, structured data consistency, and robust multi-market discovery.",
     stats: [
-      { label: "Programmatic Reach", value: "100K+" },
-      { label: "Page Crawl Efficiency", value: "100%" },
-      { label: "Indexed Keywords", value: "500+" }
+      { label: "Architecture", value: "Prerendered SSG" },
+      { label: "Governance", value: "Full Compliance" },
+      { label: "Data Quality", value: "Source of Truth" }
     ],
     features: [
-      { name: "High-DR SEO & Link Equity", desc: "Routing search engine authority to your highest-value product pages using clean internal breadcrumb routing." },
-      { name: "Technical Crawl Optimization", desc: "Prerendering deep site pages and eliminating script bloat to ensure fast Core Web Vitals and zero indexation delay." },
-      { name: "Enterprise Paid Search", desc: "Managing multi-channel search and display campaigns targeting high-value commercial accounts." }
+      { name: "Technical Architecture & Crawlability", desc: "Eliminating script bloat, rendering deep site hierarchies, and managing canonical/sitemap structures at scale." },
+      { name: "Structured Data & Knowledge Graph", desc: "Deploying valid Organization, Service, and Breadcrumb schemas aligned directly with visible web copy." },
+      { name: "Multi-Stakeholder Governance", desc: "Strict adherence to enterprise data security, change control, and brand guidelines." }
     ],
     faqs: [
-      { q: "What is programmatic landing page quality?", a: "Programmatic landing page quality requires serving unique local data, case studies, and distinct content for every target keyword variant to prevent search engine thin-content penalties." }
+      { q: "How do you handle enterprise crawl efficiency?", a: "We eliminate client-side JavaScript rendering bottlenecks through static pre-rendering, streamlined DOM hierarchies, and clean internal linking structures." }
     ]
   },
   "local-business": {
     title: "Local Business SEO & Customer Acquisition Agency | Groowiq",
-    metaDesc: "Dominate search locally. Groowiq builds Google Business Profile optimizations, local business schema, and localized Google ads for SMBs.",
-    h1: "Local Search Optimization and Lead Generation for Premium SMBs",
-    definitionQuestion: "Why is Local SEO critical for SMBs?",
-    definitionAnswer: "Local SEO is the optimization of a business's online footprint to appear in geographic search queries. Because search engines localize 'near me' and service-based keywords to the user's immediate city, premium local businesses (clinics, studios, real estate) win clients fastest by optimizing Google Business Profiles and localized schema.",
+    metaDesc: "Dominate search locally. Groowiq helps local premium businesses connect discovery on Google to qualified phone and form enquiries.",
+    h1: "Local marketing that connects discovery to a qualified enquiry",
+    definitionQuestion: "Why is Local Search Critical for Premium Businesses?",
+    definitionAnswer: "Groowiq helps local premium businesses improve how they are found, evaluated and contacted across Google, their website and paid channels. The work connects Business Profile accuracy, service/location pages, reviews, call/form tracking and follow-up capacity.",
     stats: [
-      { label: "GBP Clicks Lift", value: "2.4x" },
-      { label: "Local Review Target", value: "10/mo" },
-      { label: "Citations Consistency", value: "100%" }
+      { label: "Core Foundation", value: "GBP & NAP" },
+      { label: "Tracking", value: "Calls & Forms" },
+      { label: "Service Area", value: "Verified" }
     ],
     features: [
-      { name: "Google Business Profile Optimizations", desc: "Auditing listings, writing optimized descriptions, creating service checklists, and publishing weekly local posts." },
-      { name: "Local business Schema & NAP", desc: "Setting up identical Name, Address, and Phone details across directories to boost search engine localization signals." },
-      { name: "Localized Ads & Leads", desc: "Running targeted Google Search and Map campaigns that prompt immediate calls, direction requests, and inquiries." }
+      { name: "Google Business Profile & NAP Consistency", desc: "Auditing listings, maintaining exact Name/Address/Phone alignment across trusted directories, and managing categories." },
+      { name: "Service & Location Content", desc: "Building unique, evidence-rich location assets rather than thin, cloned doorway pages." },
+      { name: "Call & Form Conversion Tracking", desc: "Measuring show-up rates, booking velocity, and lead quality to evaluate true customer acquisition." }
     ],
     faqs: [
-      { q: "What is the single most important ranking factor for local businesses?", a: "The single most important local ranking factor is the quality and volume of Google Business Profile customer reviews, combined with absolute NAP (Name, Address, Phone) citation consistency across business directories." }
+      { q: "What factors influence local ranking?", a: "Google describes local results through relevance, distance and prominence. Complete business information, reviews and photos can help, but no single review count or NAP tactic guarantees a top position." },
+      { q: "What does Groowiq measure for local clients?", a: "We measure profile interactions, calls, direction requests, form submissions, qualified enquiries, booking rates, and lead source capacity." }
     ]
   }
 };

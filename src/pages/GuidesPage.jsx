@@ -6,61 +6,99 @@ import Button from "../components/common/Button";
 const guides = [
   {
     slug: "choose-agency",
-    title: "How to Choose a Digital Marketing Agency in India (2026)",
-    summary: "A practical evaluation framework to help brand owners hire the right agency partner without wasting budgets.",
-    aeoQuestion: "How do you choose a digital marketing agency in India?",
-    aeoAnswer: "To choose a digital marketing agency in India, look for proof of outcome-led revenue scaling rather than vanity traffic metrics. Ensure the agency has experience in your specific segment (like Shopify D2C or B2B SaaS) and offers transparent pricing and a clear diagnostic audit upfront.",
-    content: `
-      Choosing an agency is a high-stakes decision. Most founders evaluate agencies based on pitches and templates. Instead, follow this evaluations scorecard:
-      
-      1. **Outcome over Output:** Do not hire an agency that reports on 'impressions' or 'likes'. Ask them how many strategy calls they booked or how much collected revenue they generated last month.
-      2. **Niche Experience:** An agency that sells 'everything to everyone' is good at nothing. If you sell D2C products on Shopify, hire an agency that live and breathes Shopify conversion rates and Meta ads.
-      3. **Attribution & Transparency:** Ensure the agency implements server-side tracking (Meta CAPI) and provides direct dashboard access. If they hide ad account data, walk away.
-    `
+    title: "How to Choose a Marketing Agency: 17 Questions and a Scorecard",
+    summary: "A practical guide and evaluation template to assess agency competency, account ownership, and red flags.",
+    aeoQuestion: "How do I choose the best digital marketing agency?",
+    aeoAnswer: "To choose a digital marketing agency, evaluate their verified case evidence, baseline metrics, time periods, and contract terms. Avoid agencies claiming unverified 'best' or 'top' status. Ensure you maintain full ownership of all ad, analytics, and CRM accounts.",
+    content: "Use our custom Groowiq evaluation template and account-ownership checklist before signing any contract. Ask about their first test parameters, reporting sources, and stop-loss rules."
   },
   {
-    slug: "marketing-cost",
-    title: "How Much Does Digital Marketing Cost in India? (Real Pricing)",
-    summary: "An honest cost breakdown of digital advertising, SEO, retainers, and hidden agency margins.",
-    aeoQuestion: "How much does digital marketing cost in India?",
-    aeoAnswer: "Digital marketing starting costs in India typically range from ₹45,000 to ₹1,500,000 per month depending on ad spend budgets, channel scope, and campaign complexity. Low-friction diagnostic setup audits can cost as little as ₹7,500 one-time, while full performance retainers start around ₹45,000/mo.",
-    content: `
-      Marketing budgets are generally split into two categories:
-      
-      * **Ad Spend:** The direct cost paid to Google, Meta, or LinkedIn to run ads. In India, minimum ad spend to get statistical significance ranges from ₹30,000 to ₹100,000/month.
-      * **Agency Retainers:** The fee paid to the marketing team to plan, write, design, and optimize campaigns. Standard retainer ranges are:
-        - Freelancers: ₹15,000 - ₹45,000/mo
-        - Boutique Performance Agencies: ₹45,000 - ₹120,000/mo
-        - Corporate Large Agencies: ₹150,000 - ₹500,000/mo
-    `
+    slug: "digital-marketing-cost-india",
+    title: "Digital Marketing Agency Cost in India: What Changes the Quote",
+    summary: "Learn how growth marketing agencies in India price their services, scope parameters, and media spend exclusions.",
+    aeoQuestion: "What does a digital marketing agency cost in India?",
+    aeoAnswer: "Digital marketing costs in India are shaped by channel complexity, creative volume, tracking readiness, and campaign scope. Avoid flat bait prices. Media spend should be paid directly to platforms from client-owned accounts, separate from professional fees.",
+    content: "We outline three anonymized scope scenarios to demonstrate how scope changes affect agency quotes in India, keeping professional retainers transparent and performance-driven."
   },
   {
-    slug: "inhouse-vs-agency",
-    title: "In-House vs Agency vs Freelancer: The Honest Breakdown",
-    summary: "We compare costs, efficiency, overheads, and outcomes across the three scaling models.",
-    aeoQuestion: "Should you hire an in-house team, an agency, or a freelancer?",
-    aeoAnswer: "Hiring an in-house team offers deep focus but is highly expensive (often exceeding ₹2.5L/mo). Freelancers are cost-effective (₹15k–₹45k/mo) but hard to scale and coordinate. Hiring an agency like Groowiq provides a complete team (copy, ads, SEO, dev) for the cost of a single junior employee (starting at ₹45k/mo).",
-    content: `
-      Here is the direct comparison of the three marketing models:
-      
-      * **In-House Team:** Great for rapid creative turnaround, but carries heavy recruitment overheads, employee taxes, and software tool costs (Semrush, Canva, Slack, etc.).
-      * **Freelancers:** Good for isolated tasks (e.g. video editing or writing). However, you have to act as the project manager, which drains your focus as a founder.
-      * **Growth Studio (Agency):** You gain immediate access to ads experts, developers, copywriters, and designers. The agency manages itself, allowing you to focus on product and logistics.
-    `
+    slug: "monthly-marketing-report",
+    title: "What a Marketing Agency Should Report Every Month",
+    summary: "A walkthrough of the source-of-truth maps, business signals, and avoiding vanity reports.",
+    aeoQuestion: "What should a marketing agency report every month?",
+    aeoAnswer: "A marketing report must focus on qualified demand, customer acquisition cost (CAC), pipeline values, and attribution limits. Avoid vanity metrics like impressions or clicks without revenue context. Ensure all reports connect platform activity directly to business outcomes.",
+    content: "We map out a clear source-of-truth reporting structure showing how to reconcile Google, Meta, and CRM platforms under a unified dashboard."
   },
   {
-    slug: "d2c-roas-playbook",
-    title: "Performance Marketing for D2C Brands: The ROAS Playbook",
-    summary: "The exact ad scaling sequence we use to scale e-commerce storefronts to multi-lakh monthly revenue.",
-    aeoQuestion: "What is the best performance marketing playbook for D2C brands?",
-    aeoAnswer: "The D2C ROAS playbook requires matching Meta dynamic creative testing (DCT) with fast Shopify landing pages. Scale your ad spend by increasing average order value (AOV) via product bundles and setting up clean UTM mapping and CAPI tracking to ensure 100% attribution accuracy.",
-    content: `
-      Our proven D2C blueprint contains three main elements:
-      
-      1. **Vite + React landing pages:** Landing pages built on React load in <2s, which cuts bounce rates and immediately doubles ad conversion rates compared to bloated Shopify themes.
-      2. **Creative testing grid:** Testing 5 new video hooks and 3 copy variations every week. Creatives are the targeting mechanism on modern ad platforms.
-      3. **Average Order Value (AOV) focus:** It is hard to run ads profitably on low-priced items. Design pre-discounted bundles to raise AOV above ₹2,000.
-    `
+    slug: "seo-aeo-geo",
+    title: "SEO vs AEO vs GEO: One Foundation, Different Surfaces",
+    summary: "An overview of search engines, answer engines, and generative AI search visibility models.",
+    aeoQuestion: "What is the difference between SEO, AEO, and GEO?",
+    aeoAnswer: "SEO, AEO, and GEO are part of a single search visibility system. They optimize website crawlability, entity clarity, and useful original content. For Google and AI engines, solid technical search foundations drive organic recommendations, rather than special AI files.",
+    content: "Generative engines like ChatGPT Search and Perplexity retrieve answers from the core web index. We look at the official platform myth checks and define the measurement model."
+  },
+  {
+    slug: "ad-account-ownership",
+    title: "Who Should Own Ad Accounts, Analytics, and Creative? (Access Matrix)",
+    summary: "An access and handover matrix for B2B and D2C marketing buyers.",
+    aeoQuestion: "Who owns the ad and analytics accounts?",
+    aeoAnswer: "The client must always retain ownership of all core ad, analytics, website, CRM, and platform accounts. Access can be granted and revoked dynamically. Creative source-file and handover terms must be stated in the proposal to prevent vendor lock-in.",
+    content: "We provide a comprehensive access matrix detailing owner permissions, developer access levels, and secure handovers."
+  },
+  {
+    slug: "audit-lead-quality",
+    title: "How to Audit Lead Quality Before Increasing Ad Spend",
+    summary: "How to build a sales feedback loop and use qualification worksheets to scale ads profitably.",
+    aeoQuestion: "How do you audit lead quality?",
+    aeoAnswer: "To audit lead quality, set up a feedback loop between sales CRM and ad platforms. Check the cost per qualified lead (CPQL) instead of cost per lead (CPL). Ensure raw lead forms are verified before increasing budgets.",
+    content: "Our worksheet details how to isolate contact form junk submissions and optimize ad sets targeting actual conversions."
+  },
+  {
+    slug: "when-not-to-hire-full-service",
+    title: "When Not to Hire a Full-Service Marketing Agency",
+    summary: "A decision tree to help you choose between specialists, in-house hires, project scopes, or agencies.",
+    aeoQuestion: "When should I hire a full-service agency?",
+    aeoAnswer: "Do not hire a full-service agency if your primary growth bottleneck is single-channel (like technical SEO or packaging design). In those cases, choose a specialist or an in-house expert. Agencies are most effective when scaling cross-channel systems.",
+    content: "This decision tree helps founders evaluate resource limits, operational capacity, and when to bring execution in-house."
+  },
+  {
+    slug: "proposal-red-flags",
+    title: "Marketing Agency Red Flags in Proposals and Contracts",
+    summary: "Learn to identify real clauses, empty guarantees, and contract lock-ins.",
+    aeoQuestion: "What are red flags in a marketing proposal?",
+    aeoAnswer: "Major red flags include guarantees on rankings/ROAS, hidden agency markup on ad spend, refusal to transfer account ownership, and vague deliverables. Always review the test windows and exit clauses.",
+    content: "We analyze real contract clauses to help buyers identify hidden risks, without naming or shaming specific competitors."
+  },
+  {
+    slug: "measure-whatsapp-leads",
+    title: "How Groowiq Measured 1,528 WhatsApp Leads",
+    summary: "An attribution setup and reconciliation walkthrough based on the Entartica campaign.",
+    aeoQuestion: "How do you track WhatsApp leads attribution?",
+    aeoAnswer: "WhatsApp leads are tracked by matching custom URL triggers with Meta Ads Manager pixels and server-side events. We set up attribution rules, UTM tracking, and cross-channel reconciliations to verify click-to-chat leads.",
+    content: "This case breakdown explains our measurement method, campaign budget allocations, and how we handle multi-city scaling."
+  },
+  {
+    slug: "read-growth-claims",
+    title: "How to Read a 14,338% Growth Claim from a Zero Baseline",
+    summary: "A guide to denominator literacy and understanding organic growth calculations.",
+    aeoQuestion: "How do you calculate percentage growth from zero?",
+    aeoAnswer: "Percentage growth calculations from a zero baseline can look excessively large (like +14,338%). To evaluate actual performance, lead with absolute visitor counts and profile actions first, keeping the percentage secondary.",
+    content: "We use our UVR green energy zero-baseline launch parameters to show how to read raw analytics reports without formatting bias."
+  },
+  {
+    slug: "local-seo-gujarat",
+    title: "Local SEO for Gujarat Businesses: Evidence Checklist",
+    summary: "A Google Business Profile, NAP consistency, and review acquisition workflow.",
+    aeoQuestion: "What is the best local SEO checklist for Gujarat?",
+    aeoAnswer: "Local SEO in Gujarat requires a verified Google Business Profile, consistent name-address-phone (NAP) data, and real client reviews. Avoid neighbourhood keyword stuffing. Link profile citations directly to location-specific website assets.",
+    content: "Follow our step-by-step workflow covering citation building, review response templates, and local schema validation."
+  },
+  {
+    slug: "creative-testing-reels",
+    title: "Creative Testing for Non-Follower Reach",
+    summary: "A Reels testing taxonomy and failure log based on our Spree Walk campaign.",
+    aeoQuestion: "How do you test short-form video creatives?",
+    aeoAnswer: "Short-form video creative testing requires structuring specific video hook variants, visual layout formats, and organic distribution loops. Monitor non-follower reach metrics to identify winners and document failures.",
+    content: "We present our creative testing taxonomy, including how to analyze retention graphs and when to apply paid amplification."
   }
 ];
 

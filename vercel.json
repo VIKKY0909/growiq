@@ -1,5 +1,26 @@
 {
+  "redirects": [
+    {
+      "source": "/services/web-design-development",
+      "destination": "/services/web-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding-content",
+      "destination": "/services/branding",
+      "permanent": true
+    }
+  ],
   "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [

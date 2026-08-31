@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 
 const container = {
@@ -59,16 +60,16 @@ const HeroContent = ({ setOpen }) => {
             darkMode ? "text-white" : "text-[#0F1039]"
           }`}
         >
-          We build{" "}
+          A growth marketing agency that{" "}
           <span
             style={{
               color: "#D5D93B",
               textShadow: "0 0 12px rgba(213, 217, 59, 0.4)",
             }}
           >
-            brands
+            proves
           </span>{" "}
-          that people can't ignore.
+          what happened next.
         </motion.h1>
       </motion.div>
 
@@ -79,7 +80,7 @@ const HeroContent = ({ setOpen }) => {
           darkMode ? "text-gray-300" : "text-[#0F1039]/70"
         }`}
       >
-        India's AI-powered growth marketing agency — performance ads, creator-led content, brand identity and websites that convert, under one roof.
+        Groowiq is a growth marketing agency based in Ahmedabad, serving Gujarat and brands across India. We combine paid media, search, content, branding and web—but only after identifying the few moves most likely to change qualified demand and revenue.
       </motion.p>
 
       {/* CTAs */}
@@ -90,31 +91,29 @@ const HeroContent = ({ setOpen }) => {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="inline-flex items-center justify-center rounded-full bg-[#D5D93B] text-[#0F1039] px-8 py-4 text-sm sm:text-base font-extrabold hover:scale-105 hover:shadow-[0_0_30px_rgba(214,235,41,.4)] transition-all duration-300"
+          className="inline-flex items-center justify-center rounded-full bg-[#D5D93B] text-[#0F1039] px-8 py-4 text-sm sm:text-base font-extrabold hover:scale-105 hover:shadow-[0_0_30px_rgba(214,235,41,.4)] transition-all duration-300 cursor-pointer"
         >
-          Get a free strategy call
+          Show us the growth bottleneck
         </button>
 
-        <a
-          href="https://wa.me/918511822796"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/work"
           className="inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-white/10 px-8 py-4 text-sm sm:text-base font-semibold text-[#0F1039] dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300"
         >
-          Chat on WhatsApp
-        </a>
+          See verified work
+        </Link>
       </motion.div>
 
       {/* Trust Strip */}
       <motion.div
         variants={item}
-        className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-xs sm:text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400"
+        className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2 text-xs sm:text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400"
       >
-        <span>10× ROAS (representative)</span>
+        <span>1,528 WhatsApp leads in 21 days (Entartica)</span>
         <span className="text-gray-300 dark:text-white/10">•</span>
-        <span>100+ qualified leads/mo</span>
+        <span>935,937 views in 60 days (Spree Walk)</span>
         <span className="text-gray-300 dark:text-white/10">•</span>
-        <span>7.8M+ views (Entartica)</span>
+        <span>+515% LinkedIn impressions (ECHT Marine)</span>
       </motion.div>
     </motion.div>
   );

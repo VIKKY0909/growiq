@@ -2,85 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.groowiq.com/</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/about</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/pricing</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/contact</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/guides</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/locations/gujarat</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/locations/ahmedabad</loc>
   </url>
   <url>
     <loc>https://www.groowiq.com/services/performance-marketing</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/services/seo</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/services/social-media-marketing</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/services/web-development</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/services/branding</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/work</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/work/entartica-growth</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/work/spree-walk-social-growth</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/work/echt-marine-linkedin</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/work/uvr-digital-launch</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.groowiq.com/terms-of-service</loc>
   </url>
   <url>
     <loc>https://www.groowiq.com/industries/ecommerce-d2c</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/industries/startups-saas</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/industries/enterprise</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.groowiq.com/industries/local-business</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -25,6 +25,11 @@ export const navLinks = [
     ]
   },
   {
+    id: "work",
+    title: "Work",
+    path: "/work"
+  },
+  {
     id: "guides",
     title: "Guides",
     path: "/guides"
